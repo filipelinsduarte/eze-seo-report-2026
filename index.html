@@ -41,6 +41,8 @@
   top: 0 !important;
   margin: 0 !important;
 }
+.reveal .slides section.div-slide,
+.reveal .slides section.div-slide * { background: transparent; }
 
 /* ─────────────────────────────────────
    TYPOGRAPHY RESET
@@ -272,8 +274,6 @@
    DIVIDER SLIDES (green)
 ───────────────────────────────────── */
 .reveal .slides section.div-slide {
-  background: #3a7d44 !important;
-  background-color: #3a7d44 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -406,7 +406,7 @@
 </section>
 
 <!-- ══ 2. DIVIDER: GSC ════════════════════════════════════ -->
-<section class="div-slide">
+<section class="div-slide" data-background-color="#3a7d44">
   <div class="div-inner">
     <div class="div-header">
       <div class="div-icon"><img src="https://www.gstatic.com/images/branding/product/2x/search_console_48dp.png" alt="GSC"></div>
@@ -537,7 +537,7 @@
 </section>
 
 <!-- ══ 6. DIVIDER: GA4 ════════════════════════════════════ -->
-<section class="div-slide">
+<section class="div-slide" data-background-color="#3a7d44">
   <div class="div-inner">
     <div class="div-header">
       <div class="div-icon"><img src="https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg" alt="GA4"></div>
@@ -650,7 +650,7 @@
 </section>
 
 <!-- ══ 9. DIVIDER: AI ════════════════════════════════════ -->
-<section class="div-slide">
+<section class="div-slide" data-background-color="#3a7d44">
   <div class="div-inner">
     <div class="div-header">
       <div class="div-icon">
