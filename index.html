@@ -75,21 +75,18 @@
 .src-badge {
   display: flex;
   align-items: center;
-  gap: 4px;
+  justify-content: center;
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: 20px;
-  padding: 3px 9px 3px 5px;
+  padding: 5px;
   flex-shrink: 0;
   margin-left: 12px;
+  width: 28px;
+  height: 28px;
 }
-.src-badge img { width: 13px; height: 13px; display: block; }
-.src-badge span {
-  font-size: 0.46em;
-  color: var(--subtle);
-  font-weight: 400;
-  white-space: nowrap;
-}
+.src-badge img { width: 18px; height: 18px; display: block; }
+.src-badge span { display: none; }
 
 /* ─────────────────────────────────────
    METRIC CARDS
@@ -116,7 +113,7 @@
   letter-spacing: 0.5px;
   margin-bottom: 6px;
 }
-.card-label svg { width: 9px; height: 9px; flex-shrink: 0; color: var(--g); stroke: var(--g); }
+.card-label svg { width: 13px; height: 13px; flex-shrink: 0; color: var(--g); stroke: var(--g); }
 .row-old {
   background: #f2f2f0;
   border-radius: 4px;
@@ -237,7 +234,7 @@
   color: var(--black) !important;
   margin-bottom: 4px;
 }
-.info-card-title svg { width: 10px; height: 10px; flex-shrink: 0; stroke: var(--g); }
+.info-card-title svg { width: 13px; height: 13px; flex-shrink: 0; stroke: var(--g); }
 .info-card p {
   font-size: 0.54em !important;
   color: var(--mid) !important;
@@ -294,22 +291,23 @@
   margin-bottom: 10px;
 }
 .div-icon {
-  width: 30px;
-  height: 30px;
-  border-radius: 6px;
-  background: rgba(255,255,255,0.15);
-  padding: 4px;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.18);
+  padding: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .div-icon img { width: 100%; height: 100%; display: block; }
-.div-icon svg { width: 18px; height: 18px; stroke: white; }
+.div-icon svg { width: 26px; height: 26px; stroke: white; }
 .div-title {
-  font-size: 1.15em !important;
+  font-size: 1.25em !important;
   font-weight: 600 !important;
   color: white !important;
   letter-spacing: -0.01em;
+  text-align: center;
 }
 .div-rule {
   width: 80%;
@@ -330,7 +328,7 @@
   align-items: center !important;
   justify-content: center !important;
   padding: 0 !important;
-  background: linear-gradient(150deg, #ffffff 35%, #d4e9d7 80%, #b8dbbf 100%) !important;
+  background: var(--white) !important;
 }
 .cover-inner {
   display: flex;
@@ -357,7 +355,7 @@
   align-items: center !important;
   justify-content: center !important;
   padding: 0 !important;
-  background: linear-gradient(150deg, #ffffff 35%, #d4e9d7 80%, #b8dbbf 100%) !important;
+  background: var(--white) !important;
 }
 .closing-inner { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px; }
 .closing-logo { width: 52px; height: 52px; border-radius: 12px; margin-bottom: 14px; object-fit: contain; box-shadow: 0 6px 20px rgba(58,125,68,0.2); }
@@ -385,7 +383,7 @@
 <div class="slides">
 
 <!-- ══ 1. COVER ══════════════════════════════════════════ -->
-<section class="cover-slide">
+<section class="cover-slide" data-background-color="#ffffff">
   <div class="cover-inner">
     <img class="cover-logo" src="https://i0.wp.com/ezecreditservices.com/wp-content/uploads/2021/08/cropped-218973791_100895088956550_8922827240074766829_n.png?fit=192%2C192&ssl=1" alt="EZE">
     <div class="cover-tag">SEO Performance Report</div>
@@ -791,7 +789,7 @@
 </section>
 
 <!-- ══ 14. CLOSING ═══════════════════════════════════════ -->
-<section class="closing-slide">
+<section class="closing-slide" data-background-color="#ffffff">
   <div class="closing-inner">
     <img class="closing-logo" src="https://i0.wp.com/ezecreditservices.com/wp-content/uploads/2021/08/cropped-218973791_100895088956550_8922827240074766829_n.png?fit=192%2C192&ssl=1" alt="EZE">
     <div class="closing-headline">The momentum is compounding.</div>
