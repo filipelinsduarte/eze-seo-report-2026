@@ -113,7 +113,7 @@
   letter-spacing: 0.5px;
   margin-bottom: 6px;
 }
-.card-label svg { width: 13px; height: 13px; flex-shrink: 0; color: var(--g); stroke: var(--g); }
+.card-label svg { width: 15px; height: 15px; flex-shrink: 0; color: var(--g); stroke: var(--g); }
 .row-old {
   background: #f2f2f0;
   border-radius: 4px;
@@ -232,9 +232,9 @@
   font-size: 0.58em !important;
   font-weight: 600 !important;
   color: var(--black) !important;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
-.info-card-title svg { width: 13px; height: 13px; flex-shrink: 0; stroke: var(--g); }
+.info-card-title svg { width: 15px; height: 15px; flex-shrink: 0; stroke: var(--g); }
 .info-card p {
   font-size: 0.54em !important;
   color: var(--mid) !important;
@@ -272,16 +272,22 @@
    DIVIDER SLIDES (green)
 ───────────────────────────────────── */
 .reveal .slides section.div-slide {
-  background: var(--g) !important;
+  background: #3a7d44 !important;
+  background-color: #3a7d44 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   padding: 0 !important;
+  text-align: center !important;
 }
 .div-inner {
-  text-align: center;
+  text-align: center !important;
   width: 100%;
   padding: 0 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .div-header {
   display: flex;
