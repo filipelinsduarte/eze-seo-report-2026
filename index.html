@@ -6,128 +6,386 @@
 <title>EZE Credit Services — SEO Performance Report 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/white.min.css">
 <style>
-  :root {
-    --g: #3a7d44; --g-light: #eaf3eb; --g-mid: #d0e8d3;
-    --black: #1a1a1a; --mid: #4a4a4a; --subtle: #777;
-    --border: #e5e5e5; --bg: #f7f7f5; --white: #ffffff; --up: #2e7d32;
-  }
-  .reveal { font-family: 'Inter', system-ui, sans-serif; background: #fff; }
-  .reveal .slides section { text-align: left; padding: 28px 34px 10px; box-sizing: border-box; position: relative; }
-  .reveal h2 { font-family: 'Inter', sans-serif !important; color: var(--black) !important; font-size: 0.88em !important; font-weight: 600 !important; letter-spacing: -0.01em !important; border-bottom: 1.5px solid var(--border) !important; padding-bottom: 5px !important; margin-bottom: 9px !important; margin-top: 0 !important; white-space: nowrap !important; overflow: hidden !important; text-overflow: ellipsis !important; }
-  .reveal p, .reveal li, .reveal td, .reveal th { font-family: 'Inter', sans-serif !important; line-height: 1.4 !important; color: var(--black) !important; }
+/* ─────────────────────────────────────
+   RESET & BASE
+───────────────────────────────────── */
+* { box-sizing: border-box; }
 
-  /* SOURCE BADGE — top right of content slides */
-  .src-badge { position: absolute; top: 0; right: 0; display: flex; align-items: center; gap: 4px; background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 3px 9px 3px 6px; z-index: 10; }
-  .src-badge img { width: 14px; height: 14px; border-radius: 2px; }
-  .src-badge span { font-size: 0.44em !important; color: var(--subtle) !important; font-family: 'Inter', sans-serif; font-weight: 400; white-space: nowrap; }
+:root {
+  --g:       #3a7d44;
+  --g-light: #eaf3eb;
+  --g-mid:   #c8e0cb;
+  --black:   #1a1a1a;
+  --mid:     #444;
+  --subtle:  #777;
+  --border:  #e4e4e4;
+  --bg:      #f6f6f4;
+  --white:   #ffffff;
+  --green:   #2e7d32;
+}
 
-  /* SVG ICONS inside cards / info-cards */
-  .ic { width: 12px; height: 12px; vertical-align: middle; margin-right: 4px; display: inline-block; }
+.reveal,
+.reveal * {
+  font-family: 'Inter', system-ui, sans-serif !important;
+}
 
-  /* COVER */
-  .cover-section { padding: 0 !important; }
-  .cover-inner { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 20px; }
-  .cover-logo { width: 54px; height: 54px; border-radius: 12px; margin-bottom: 14px; object-fit: contain; box-shadow: 0 6px 20px rgba(58,125,68,0.22); }
-  .cover-tag { font-size: 0.58em; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: var(--g); background: var(--g-light); border: 1px solid var(--g-mid); padding: 3px 12px; border-radius: 20px; margin-bottom: 11px; }
-  .cover-title { font-size: 1.8em; font-weight: 700; color: var(--black); letter-spacing: -0.025em; margin: 0 0 5px; line-height: 1.15; text-align: center; }
-  .cover-sub { font-size: 0.7em; color: var(--subtle); margin: 0 0 18px; text-align: center; }
-  .cover-divider { width: 36px; height: 2px; background: var(--g); border-radius: 2px; margin: 0 auto 16px; }
-  .cover-periods { display: flex; align-items: center; gap: 10px; justify-content: center; margin-bottom: 14px; }
-  .period-pill { font-size: 0.64em; font-weight: 500; padding: 5px 14px; border-radius: 20px; border: 1.5px solid var(--border); color: var(--mid); background: var(--white); }
-  .period-pill.active { background: var(--g); color: white; border-color: var(--g); }
-  .cover-date { font-size: 0.58em; color: var(--subtle); text-align: center; }
+/* Every slide: white bg, top-left alignment, fixed padding */
+.reveal .slides section {
+  background: var(--white);
+  text-align: left !important;
+  padding: 26px 36px 14px !important;
+  top: 0 !important;
+  margin: 0 !important;
+}
 
-  /* DIVIDER SLIDES */
-  .divider { text-align: center !important; }
-  .divider h2 { color: white !important; border-bottom: 1.5px solid rgba(255,255,255,0.2) !important; font-size: 1.15em !important; white-space: nowrap !important; }
-  .divider-inner { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 8px; }
-  .divider-icon { width: 32px; height: 32px; border-radius: 6px; background: rgba(255,255,255,0.18); padding: 4px; box-sizing: border-box; }
-  .divider p { color: rgba(255,255,255,0.75) !important; font-size: 0.68em !important; }
+/* ─────────────────────────────────────
+   TYPOGRAPHY RESET
+───────────────────────────────────── */
+.reveal h1, .reveal h2, .reveal h3,
+.reveal p, .reveal li, .reveal td, .reveal th {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
 
-  /* METRIC CARDS */
-  .cards-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 6px; margin-bottom: 7px; }
-  .cards-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 6px; margin-bottom: 7px; }
-  .cards-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; margin-bottom: 7px; }
+/* ─────────────────────────────────────
+   SLIDE HEADING
+───────────────────────────────────── */
+.slide-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid var(--border);
+  padding-bottom: 6px;
+  margin-bottom: 10px;
+}
+.slide-title {
+  font-size: 0.88em;
+  font-weight: 600;
+  color: var(--black);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.src-badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 3px 9px 3px 5px;
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+.src-badge img { width: 13px; height: 13px; display: block; }
+.src-badge span {
+  font-size: 0.46em;
+  color: var(--subtle);
+  font-weight: 400;
+  white-space: nowrap;
+}
 
-  .card { background: var(--white); border: 1px solid var(--border); border-radius: 7px; padding: 8px 10px 7px; position: relative; overflow: hidden; box-sizing: border-box; }
-  .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--g); }
-  .card .lbl { font-size: 0.49em !important; color: var(--subtle) !important; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 5px; display: flex; align-items: center; gap: 3px; }
-  .card .lbl svg { width: 9px; height: 9px; flex-shrink: 0; }
+/* ─────────────────────────────────────
+   METRIC CARDS
+───────────────────────────────────── */
+.cards-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 6px; margin-bottom: 7px; }
+.cards-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 6px; margin-bottom: 7px; }
+.cards-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; margin-bottom: 7px; }
 
-  .row-old { background: #f2f2f0; border-radius: 4px; padding: 4px 7px; margin-bottom: 3px; }
-  .row-new { background: var(--g-light); border-radius: 4px; padding: 4px 7px; margin-bottom: 4px; }
-  .row-period { font-size: 0.46em !important; font-weight: 400 !important; display: block; margin-bottom: 1px; white-space: nowrap; }
-  .row-old .row-period { color: #999 !important; }
-  .row-new .row-period { color: var(--g) !important; font-weight: 500 !important; }
-  .row-val { font-size: 0.95em !important; font-weight: 700 !important; display: block; line-height: 1.1; }
-  .row-old .row-val { color: #aaa !important; }
-  .row-new .row-val { color: var(--black) !important; }
-  .chg { font-size: 0.5em !important; font-weight: 600 !important; color: var(--up) !important; display: block; }
-  .chg.neg { color: #c62828 !important; }
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 8px 10px 7px;
+  border-top: 2px solid var(--g);
+  overflow: hidden;
+}
+.card-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.49em;
+  color: var(--subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+.card-label svg { width: 9px; height: 9px; flex-shrink: 0; color: var(--g); stroke: var(--g); }
+.row-old {
+  background: #f2f2f0;
+  border-radius: 4px;
+  padding: 3px 7px;
+  margin-bottom: 3px;
+}
+.row-new {
+  background: var(--g-light);
+  border-radius: 4px;
+  padding: 3px 7px;
+  margin-bottom: 4px;
+}
+.row-period {
+  font-size: 0.46em !important;
+  color: #999 !important;
+  display: block;
+  line-height: 1.3;
+}
+.row-new .row-period { color: var(--g) !important; font-weight: 500 !important; }
+.row-val {
+  font-size: 0.93em !important;
+  font-weight: 700 !important;
+  color: #bbb !important;
+  display: block;
+  line-height: 1.15;
+}
+.row-new .row-val { color: var(--black) !important; }
+.card-chg {
+  font-size: 0.5em !important;
+  font-weight: 600 !important;
+  color: var(--green) !important;
+  display: block;
+}
+.card-chg.neg { color: #c62828 !important; }
 
-  /* TABLE */
-  .tbl { width: 100%; border-collapse: collapse; }
-  .tbl th { background: var(--black); color: white !important; font-size: 0.52em !important; font-weight: 500 !important; padding: 5px 7px; text-align: left; white-space: nowrap; }
-  .tbl th.gh { background: var(--g); }
-  .tbl td { font-size: 0.56em !important; padding: 4px 7px; border-bottom: 1px solid var(--border); color: var(--mid) !important; vertical-align: middle; }
-  .tbl tr:nth-child(even) td { background: var(--bg); }
-  .up-txt { color: var(--up) !important; font-weight: 600; }
-  .new-tag { background: var(--g); color: white; font-size: 0.82em; padding: 1px 6px; border-radius: 8px; font-weight: 500; }
+/* ─────────────────────────────────────
+   TABLE
+───────────────────────────────────── */
+.tbl { width: 100%; border-collapse: collapse; }
+.tbl th {
+  background: var(--black);
+  color: white !important;
+  font-size: 0.52em !important;
+  font-weight: 500 !important;
+  padding: 5px 7px;
+  text-align: left;
+  white-space: nowrap;
+}
+.tbl th.gh { background: var(--g); }
+.tbl td {
+  font-size: 0.56em !important;
+  padding: 4px 7px;
+  border-bottom: 1px solid var(--border);
+  color: var(--mid) !important;
+  vertical-align: middle;
+}
+.tbl tr:nth-child(even) td { background: var(--bg); }
+.up { color: var(--green) !important; font-weight: 600; }
+.new-tag {
+  background: var(--g);
+  color: white;
+  font-size: 0.82em;
+  padding: 1px 6px;
+  border-radius: 8px;
+  font-weight: 500;
+}
 
-  /* CALLOUT */
-  .callout { background: var(--g-light); border-left: 2.5px solid var(--g); border-radius: 0 5px 5px 0; padding: 6px 10px; margin-top: 6px; }
-  .callout p { margin: 0 !important; font-size: 0.58em !important; color: var(--mid) !important; line-height: 1.45 !important; }
-  .callout p strong { color: var(--black) !important; }
+/* ─────────────────────────────────────
+   CALLOUT
+───────────────────────────────────── */
+.callout {
+  background: var(--g-light);
+  border-left: 2.5px solid var(--g);
+  border-radius: 0 5px 5px 0;
+  padding: 6px 10px;
+  margin-top: 7px;
+}
+.callout p {
+  font-size: 0.58em !important;
+  color: var(--mid) !important;
+  line-height: 1.45 !important;
+}
+.callout p strong { color: var(--black) !important; }
 
-  /* AI ITEMS */
-  .ai-items { margin: 8px 0 0; display: flex; flex-direction: column; gap: 5px; }
-  .ai-item { background: var(--bg); border: 1px solid var(--border); border-left: 2.5px solid var(--g); border-radius: 0 5px 5px 0; padding: 6px 10px; }
-  .ai-item p { margin: 0 !important; font-size: 0.58em !important; color: var(--mid) !important; line-height: 1.4 !important; }
+/* ─────────────────────────────────────
+   AI ITEMS
+───────────────────────────────────── */
+.ai-items { display: flex; flex-direction: column; gap: 5px; margin-top: 8px; }
+.ai-item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-left: 2.5px solid var(--g);
+  border-radius: 0 5px 5px 0;
+  padding: 5px 10px;
+}
+.ai-item p {
+  font-size: 0.58em !important;
+  color: var(--mid) !important;
+  line-height: 1.4 !important;
+}
 
-  /* INFO CARDS */
-  .info-card { background: var(--bg); border: 1px solid var(--border); border-radius: 7px; padding: 9px 10px; border-top: 2px solid var(--g); }
-  .info-card .ic-title { font-size: 0.58em !important; font-weight: 600 !important; color: var(--black) !important; margin-bottom: 3px; display: flex; align-items: center; gap: 5px; }
-  .info-card .ic-title svg { width: 11px; height: 11px; flex-shrink: 0; color: var(--g); }
-  .info-card p { font-size: 0.55em !important; color: var(--mid) !important; line-height: 1.4 !important; margin: 0 !important; }
+/* ─────────────────────────────────────
+   INFO CARDS (needle slide)
+───────────────────────────────────── */
+.info-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--g);
+  border-radius: 7px;
+  padding: 9px 10px;
+}
+.info-card-title {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.58em !important;
+  font-weight: 600 !important;
+  color: var(--black) !important;
+  margin-bottom: 4px;
+}
+.info-card-title svg { width: 10px; height: 10px; flex-shrink: 0; stroke: var(--g); }
+.info-card p {
+  font-size: 0.54em !important;
+  color: var(--mid) !important;
+  line-height: 1.4 !important;
+}
 
-  /* RESULTS GRID */
-  .res-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 6px; margin-top: 6px; }
-  .res-item { background: var(--bg); border: 1px solid var(--border); border-radius: 7px; padding: 8px 12px; display: flex; align-items: flex-start; gap: 10px; }
-  .res-num { font-size: 1.05em !important; font-weight: 700 !important; color: var(--g) !important; flex-shrink: 0; line-height: 1.2; min-width: 56px; }
-  .res-text { font-size: 0.58em !important; color: var(--mid) !important; line-height: 1.4 !important; }
+/* ─────────────────────────────────────
+   RESULTS GRID
+───────────────────────────────────── */
+.res-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 6px; margin-top: 6px; }
+.res-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 8px 11px;
+}
+.res-num {
+  font-size: 1.05em !important;
+  font-weight: 700 !important;
+  color: var(--g) !important;
+  flex-shrink: 0;
+  min-width: 54px;
+  line-height: 1.2;
+}
+.res-text {
+  font-size: 0.57em !important;
+  color: var(--mid) !important;
+  line-height: 1.4 !important;
+}
 
-  /* CLOSING */
-  .closing-inner { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 20px; }
-  .closing-logo { width: 52px; height: 52px; border-radius: 12px; margin-bottom: 14px; object-fit: contain; box-shadow: 0 6px 20px rgba(58,125,68,0.22); }
-  .closing-headline { font-size: 1.55em; font-weight: 700; color: var(--black); letter-spacing: -0.02em; margin-bottom: 6px; text-align: center; }
-  .closing-sub { font-size: 0.68em; color: var(--subtle); text-align: center; margin-bottom: 20px; line-height: 1.5; }
-  .closing-stats { display: flex; gap: 0; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: var(--white); margin-bottom: 20px; }
-  .closing-stat { flex: 1; text-align: center; padding: 14px 10px; border-right: 1px solid var(--border); }
-  .closing-stat:last-child { border-right: none; }
-  .cs-num { font-size: 1.5em; font-weight: 700; color: var(--g); display: block; line-height: 1.1; }
-  .cs-lbl { font-size: 0.55em; color: var(--subtle); display: block; margin-top: 3px; }
-  .closing-divider { width: 36px; height: 2px; background: var(--g); border-radius: 2px; margin: 0 auto 12px; }
-  .closing-url { font-size: 0.66em; color: var(--g); font-weight: 500; margin-bottom: 6px; }
-  .closing-note { font-size: 0.52em; color: #bbb; text-align: center; }
+/* ─────────────────────────────────────
+   DIVIDER SLIDES (green)
+───────────────────────────────────── */
+.reveal .slides section.div-slide {
+  background: var(--g) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+}
+.div-inner {
+  text-align: center;
+  width: 100%;
+  padding: 0 44px;
+}
+.div-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.div-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.15);
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.div-icon img { width: 100%; height: 100%; display: block; }
+.div-icon svg { width: 18px; height: 18px; stroke: white; }
+.div-title {
+  font-size: 1.15em !important;
+  font-weight: 600 !important;
+  color: white !important;
+  letter-spacing: -0.01em;
+}
+.div-rule {
+  width: 80%;
+  margin: 0 auto 10px;
+  border: none;
+  border-top: 1.5px solid rgba(255,255,255,0.22);
+}
+.div-sub {
+  font-size: 0.68em !important;
+  color: rgba(255,255,255,0.75) !important;
+}
 
-  /* REVEAL */
-  .reveal .progress { color: var(--g) !important; height: 2px !important; }
-  .reveal .controls button { color: var(--g) !important; }
-  .reveal .slide-number { font-family: 'Inter', sans-serif !important; font-size: 10px !important; color: var(--subtle) !important; background: transparent !important; }
+/* ─────────────────────────────────────
+   COVER SLIDE
+───────────────────────────────────── */
+.reveal .slides section.cover-slide {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  background: linear-gradient(150deg, #ffffff 35%, #d4e9d7 80%, #b8dbbf 100%) !important;
+}
+.cover-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+.cover-logo { width: 54px; height: 54px; border-radius: 12px; margin-bottom: 14px; object-fit: contain; box-shadow: 0 6px 20px rgba(58,125,68,0.2); }
+.cover-tag { font-size: 0.58em; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: var(--g); background: rgba(255,255,255,0.75); border: 1px solid var(--g-mid); padding: 3px 12px; border-radius: 20px; margin-bottom: 11px; }
+.cover-title { font-size: 1.8em; font-weight: 700; color: var(--black); letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 5px; }
+.cover-sub { font-size: 0.7em; color: var(--subtle); margin-bottom: 18px; }
+.cover-divider { width: 36px; height: 2px; background: var(--g); border-radius: 2px; margin: 0 auto 16px; }
+.cover-periods { display: flex; align-items: center; gap: 10px; justify-content: center; margin-bottom: 14px; }
+.period-pill { font-size: 0.64em; font-weight: 500; padding: 5px 14px; border-radius: 20px; border: 1.5px solid var(--border); color: var(--mid); background: rgba(255,255,255,0.85); }
+.period-pill.active { background: var(--g); color: white; border-color: var(--g); }
+.cover-date { font-size: 0.58em; color: var(--subtle); }
+
+/* ─────────────────────────────────────
+   CLOSING SLIDE
+───────────────────────────────────── */
+.reveal .slides section.closing-slide {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  background: linear-gradient(150deg, #ffffff 35%, #d4e9d7 80%, #b8dbbf 100%) !important;
+}
+.closing-inner { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px; }
+.closing-logo { width: 52px; height: 52px; border-radius: 12px; margin-bottom: 14px; object-fit: contain; box-shadow: 0 6px 20px rgba(58,125,68,0.2); }
+.closing-headline { font-size: 1.55em; font-weight: 700; color: var(--black); letter-spacing: -0.02em; margin-bottom: 6px; }
+.closing-sub { font-size: 0.68em; color: var(--subtle); margin-bottom: 20px; line-height: 1.5; }
+.closing-stats { display: flex; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: rgba(255,255,255,0.85); margin-bottom: 20px; }
+.closing-stat { flex: 1; text-align: center; padding: 14px 10px; border-right: 1px solid var(--border); }
+.closing-stat:last-child { border-right: none; }
+.cs-num { font-size: 1.5em; font-weight: 700; color: var(--g); display: block; line-height: 1.1; }
+.cs-lbl { font-size: 0.55em; color: var(--subtle); display: block; margin-top: 3px; }
+.closing-divider { width: 36px; height: 2px; background: var(--g); border-radius: 2px; margin: 0 auto 12px; }
+.closing-url { font-size: 0.66em; color: var(--g); font-weight: 500; margin-bottom: 6px; }
+.closing-note { font-size: 0.52em; color: #bbb; }
+
+/* ─────────────────────────────────────
+   REVEAL CHROME
+───────────────────────────────────── */
+.reveal .progress { color: var(--g) !important; height: 2px !important; }
+.reveal .controls button { color: var(--g) !important; }
+.reveal .slide-number { font-size: 10px !important; color: var(--subtle) !important; background: transparent !important; }
 </style>
 </head>
 <body>
 <div class="reveal">
 <div class="slides">
 
-<!-- SVG icon defs reused inline via JS — we embed inline SVGs directly -->
-
-<!-- 1. COVER -->
-<section data-background-color="#ffffff" class="cover-section">
+<!-- ══ 1. COVER ══════════════════════════════════════════ -->
+<section class="cover-slide">
   <div class="cover-inner">
     <img class="cover-logo" src="https://i0.wp.com/ezecreditservices.com/wp-content/uploads/2021/08/cropped-218973791_100895088956550_8922827240074766829_n.png?fit=192%2C192&ssl=1" alt="EZE">
     <div class="cover-tag">SEO Performance Report</div>
@@ -136,68 +394,70 @@
     <div class="cover-divider"></div>
     <div class="cover-periods">
       <span class="period-pill">Oct&ndash;Dec 2025</span>
-      <span style="color:#ccc; font-size:0.8em;">vs</span>
+      <span style="color:#bbb;font-size:0.8em;">vs</span>
       <span class="period-pill active">Jan&ndash;Mar 2026</span>
     </div>
     <div class="cover-date">Prepared March 16, 2026 &nbsp;&middot;&nbsp; 72-day period comparison</div>
   </div>
 </section>
 
-<!-- 2. DIVIDER GSC -->
-<section data-background-color="#3a7d44" class="cover-section">
-  <div style="padding:30px 44px; text-align:center;">
-    <div class="divider-inner">
-      <img class="divider-icon" src="https://www.gstatic.com/images/branding/product/2x/search_console_48dp.png" alt="GSC">
-      <h2 style="color:white; border-bottom-color:rgba(255,255,255,0.2); display:inline; border-bottom:none !important; margin:0 !important; padding:0 !important; font-size:1.15em !important;">Google Search Console</h2>
+<!-- ══ 2. DIVIDER: GSC ════════════════════════════════════ -->
+<section class="div-slide">
+  <div class="div-inner">
+    <div class="div-header">
+      <div class="div-icon"><img src="https://www.gstatic.com/images/branding/product/2x/search_console_48dp.png" alt="GSC"></div>
+      <div class="div-title">Google Search Console</div>
     </div>
-    <div style="width:80%; margin:0 auto; border-bottom:1.5px solid rgba(255,255,255,0.2); margin-bottom:10px;"></div>
-    <p style="color:rgba(255,255,255,0.75); font-size:0.68em;">Organic search visibility and click performance</p>
+    <hr class="div-rule">
+    <div class="div-sub">Organic search visibility and click performance</div>
   </div>
 </section>
 
-<!-- 3. GSC OVERVIEW -->
-<section data-background-color="#ffffff">
-  <div class="src-badge">
-    <img src="https://www.gstatic.com/images/branding/product/2x/search_console_48dp.png" alt="GSC">
-    <span>Google Search Console</span>
+<!-- ══ 3. ORGANIC SEARCH OVERVIEW ════════════════════════ -->
+<section>
+  <div class="slide-header">
+    <div class="slide-title">Organic Search Overview</div>
+    <div class="src-badge">
+      <img src="https://www.gstatic.com/images/branding/product/2x/search_console_48dp.png" alt="GSC">
+      <span>Google Search Console</span>
+    </div>
   </div>
-  <h2>Organic Search Overview</h2>
   <div class="cards-4">
     <div class="card">
-      <div class="lbl">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--g);width:9px;height:9px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      <div class="card-label">
+        <svg fill="none" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         Organic Clicks
       </div>
       <div class="row-old"><span class="row-period">Oct&ndash;Dec 2025</span><span class="row-val">987</span></div>
       <div class="row-new"><span class="row-period">Jan&ndash;Mar 2026</span><span class="row-val">1,719</span></div>
-      <span class="chg">+74%</span>
+      <span class="card-chg">+74%</span>
     </div>
     <div class="card">
-      <div class="lbl">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--g);width:9px;height:9px;"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 3"/></svg>
+      <div class="card-label">
+        <svg fill="none" stroke-width="2.5" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
         Impressions
       </div>
       <div class="row-old"><span class="row-period">Oct&ndash;Dec 2025</span><span class="row-val">42,192</span></div>
       <div class="row-new"><span class="row-period">Jan&ndash;Mar 2026</span><span class="row-val">68,880</span></div>
-      <span class="chg">+63%</span>
+      <span class="card-chg">+63%</span>
     </div>
     <div class="card">
-      <div class="lbl">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--g);width:9px;height:9px;"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <div class="card-label">
+        <svg fill="none" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
         Click-Through Rate
       </div>
       <div class="row-old"><span class="row-period">Oct&ndash;Dec 2025</span><span class="row-val">2.34%</span></div>
       <div class="row-new"><span class="row-period">Jan&ndash;Mar 2026</span><span class="row-val">2.50%</span></div>
-      <span class="chg">+0.16pp</span>
+      <span class="card-chg">+0.16pp</span>
     </div>
     <div class="card">
-      <div class="lbl">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--g);width:9px;height:9px;"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+      <div class="card-label">
+        <svg fill="none" stroke-width="2.5" viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
         Avg. Position
       </div>
       <div class="row-old"><span class="row-period">Oct&ndash;Dec 2025</span><span class="row-val">13.9</span></div>
       <div class="row-new"><span class="row-period">Jan&ndash;Mar 2026</span><span class="row-val">12.7</span></div>
-      <span class="chg">Improved</span>
+      <span class="card-chg">Improved</span>
     </div>
   </div>
   <div class="callout">
@@ -205,13 +465,15 @@
   </div>
 </section>
 
-<!-- 4. KEYWORD PERFORMANCE -->
-<section data-background-color="#ffffff">
-  <div class="src-badge">
-    <img src="https://www.gstatic.com/images/branding/product/2x/search_console_48dp.png" alt="GSC">
-    <span>Google Search Console</span>
+<!-- ══ 4. KEYWORD PERFORMANCE ════════════════════════════ -->
+<section>
+  <div class="slide-header">
+    <div class="slide-title">Keyword Performance</div>
+    <div class="src-badge">
+      <img src="https://www.gstatic.com/images/branding/product/2x/search_console_48dp.png" alt="GSC">
+      <span>Google Search Console</span>
+    </div>
   </div>
-  <h2>Keyword Performance</h2>
   <table class="tbl">
     <thead>
       <tr>
@@ -224,13 +486,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td>tradelines for sale</td><td>191</td><td>9.2</td><td>324</td><td>9.0</td><td class="up-txt">+70%</td></tr>
-      <tr><td>buy tradelines</td><td>23</td><td>10.8</td><td>76</td><td>10.2</td><td class="up-txt">+230%</td></tr>
-      <tr><td>primary tradelines for sale</td><td>4</td><td>21.8</td><td>41</td><td>11.4</td><td class="up-txt">+925%</td></tr>
-      <tr><td>$20,000 tradeline for sale</td><td>1</td><td>6.1</td><td>29</td><td>6.5</td><td class="up-txt">+2,800%</td></tr>
-      <tr><td>credit tradelines for sale</td><td>14</td><td>10.7</td><td>24</td><td>11.2</td><td class="up-txt">+71%</td></tr>
-      <tr><td>best place to buy tradelines</td><td>4</td><td>12.3</td><td>12</td><td>10.0</td><td class="up-txt">+200%</td></tr>
-      <tr><td>million dollar tradelines for sale</td><td>4</td><td>7.7</td><td>13</td><td>6.0</td><td class="up-txt">+225%</td></tr>
+      <tr><td>tradelines for sale</td><td>191</td><td>9.2</td><td>324</td><td>9.0</td><td class="up">+70%</td></tr>
+      <tr><td>buy tradelines</td><td>23</td><td>10.8</td><td>76</td><td>10.2</td><td class="up">+230%</td></tr>
+      <tr><td>primary tradelines for sale</td><td>4</td><td>21.8</td><td>41</td><td>11.4</td><td class="up">+925%</td></tr>
+      <tr><td>$20,000 tradeline for sale</td><td>1</td><td>6.1</td><td>29</td><td>6.5</td><td class="up">+2,800%</td></tr>
+      <tr><td>credit tradelines for sale</td><td>14</td><td>10.7</td><td>24</td><td>11.2</td><td class="up">+71%</td></tr>
+      <tr><td>best place to buy tradelines</td><td>4</td><td>12.3</td><td>12</td><td>10.0</td><td class="up">+200%</td></tr>
+      <tr><td>million dollar tradelines for sale</td><td>4</td><td>7.7</td><td>13</td><td>6.0</td><td class="up">+225%</td></tr>
     </tbody>
   </table>
   <div class="callout">
@@ -238,13 +500,15 @@
   </div>
 </section>
 
-<!-- 5. NEW PAGES -->
-<section data-background-color="#ffffff">
-  <div class="src-badge">
-    <img src="https://www.gstatic.com/images/branding/product/2x/search_console_48dp.png" alt="GSC">
-    <span>Google Search Console</span>
+<!-- ══ 5. NEW PAGES ══════════════════════════════════════ -->
+<section>
+  <div class="slide-header">
+    <div class="slide-title">New Pages That Entered Search Rankings</div>
+    <div class="src-badge">
+      <img src="https://www.gstatic.com/images/branding/product/2x/search_console_48dp.png" alt="GSC">
+      <span>Google Search Console</span>
+    </div>
   </div>
-  <h2>New Pages That Entered Search Rankings</h2>
   <table class="tbl">
     <thead>
       <tr>
@@ -268,92 +532,96 @@
   </div>
 </section>
 
-<!-- 6. DIVIDER GA4 -->
-<section data-background-color="#3a7d44" class="cover-section">
-  <div style="padding:30px 44px; text-align:center;">
-    <div class="divider-inner">
-      <img class="divider-icon" src="https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg" alt="GA4">
-      <h2 style="color:white; border-bottom:none !important; margin:0 !important; padding:0 !important; font-size:1.15em !important; display:inline;">Google Analytics 4</h2>
+<!-- ══ 6. DIVIDER: GA4 ════════════════════════════════════ -->
+<section class="div-slide">
+  <div class="div-inner">
+    <div class="div-header">
+      <div class="div-icon"><img src="https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg" alt="GA4"></div>
+      <div class="div-title">Google Analytics 4</div>
     </div>
-    <div style="width:80%; margin:0 auto; border-bottom:1.5px solid rgba(255,255,255,0.2); margin-bottom:10px;"></div>
-    <p style="color:rgba(255,255,255,0.75); font-size:0.68em;">Overall site traffic, users and channel performance</p>
+    <hr class="div-rule">
+    <div class="div-sub">Overall site traffic, users and channel performance</div>
   </div>
 </section>
 
-<!-- 7. GA4 OVERVIEW -->
-<section data-background-color="#ffffff">
-  <div class="src-badge">
-    <img src="https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg" alt="GA4">
-    <span>Google Analytics 4</span>
+<!-- ══ 7. SITE TRAFFIC OVERVIEW ══════════════════════════ -->
+<section>
+  <div class="slide-header">
+    <div class="slide-title">Site Traffic Overview</div>
+    <div class="src-badge">
+      <img src="https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg" alt="GA4">
+      <span>Google Analytics 4</span>
+    </div>
   </div>
-  <h2>Site Traffic Overview</h2>
   <div class="cards-4">
     <div class="card">
-      <div class="lbl">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--g);width:9px;height:9px;"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      <div class="card-label">
+        <svg fill="none" stroke-width="2.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
         Sessions
       </div>
       <div class="row-old"><span class="row-period">Oct&ndash;Dec 2025</span><span class="row-val">4,462</span></div>
       <div class="row-new"><span class="row-period">Jan&ndash;Mar 2026</span><span class="row-val">7,452</span></div>
-      <span class="chg">+67%</span>
+      <span class="card-chg">+67%</span>
     </div>
     <div class="card">
-      <div class="lbl">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--g);width:9px;height:9px;"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <div class="card-label">
+        <svg fill="none" stroke-width="2.5" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         Total Users
       </div>
       <div class="row-old"><span class="row-period">Oct&ndash;Dec 2025</span><span class="row-val">2,524</span></div>
       <div class="row-new"><span class="row-period">Jan&ndash;Mar 2026</span><span class="row-val">5,150</span></div>
-      <span class="chg">+104%</span>
+      <span class="card-chg">+104%</span>
     </div>
     <div class="card">
-      <div class="lbl">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--g);width:9px;height:9px;"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" y1="11" x2="23" y2="11"/></svg>
+      <div class="card-label">
+        <svg fill="none" stroke-width="2.5" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="17" y1="11" x2="23" y2="11"/></svg>
         New Users
       </div>
       <div class="row-old"><span class="row-period">Oct&ndash;Dec 2025</span><span class="row-val">2,401</span></div>
       <div class="row-new"><span class="row-period">Jan&ndash;Mar 2026</span><span class="row-val">5,014</span></div>
-      <span class="chg">+109%</span>
+      <span class="card-chg">+109%</span>
     </div>
     <div class="card">
-      <div class="lbl">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--g);width:9px;height:9px;"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+      <div class="card-label">
+        <svg fill="none" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
         Page Views
       </div>
       <div class="row-old"><span class="row-period">Oct&ndash;Dec 2025</span><span class="row-val">18,776</span></div>
       <div class="row-new"><span class="row-period">Jan&ndash;Mar 2026</span><span class="row-val">29,196</span></div>
-      <span class="chg">+55%</span>
+      <span class="card-chg">+55%</span>
     </div>
   </div>
   <div class="cards-2">
     <div class="card">
-      <div class="lbl">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--g);width:9px;height:9px;"><circle cx="12" cy="12" r="9"/><polyline points="12 6 12 12 16 14"/></svg>
+      <div class="card-label">
+        <svg fill="none" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 6 12 12 16 14"/></svg>
         Avg. Session Duration
       </div>
       <div class="row-old"><span class="row-period">Oct&ndash;Dec 2025</span><span class="row-val">322s</span></div>
       <div class="row-new"><span class="row-period">Jan&ndash;Mar 2026</span><span class="row-val">266s</span></div>
-      <span class="chg neg">-56s (more volume, faster intent)</span>
+      <span class="card-chg neg">-56s (more volume, faster intent)</span>
     </div>
     <div class="card">
-      <div class="lbl">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="color:var(--g);width:9px;height:9px;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      <div class="card-label">
+        <svg fill="none" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         Bounce Rate
       </div>
       <div class="row-old"><span class="row-period">Oct&ndash;Dec 2025</span><span class="row-val">10.6%</span></div>
       <div class="row-new"><span class="row-period">Jan&ndash;Mar 2026</span><span class="row-val">11.4%</span></div>
-      <span class="chg neg">+0.8pp, still very healthy</span>
+      <span class="card-chg neg">+0.8pp, still very healthy</span>
     </div>
   </div>
 </section>
 
-<!-- 8. CHANNEL BREAKDOWN -->
-<section data-background-color="#ffffff">
-  <div class="src-badge">
-    <img src="https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg" alt="GA4">
-    <span>Google Analytics 4</span>
+<!-- ══ 8. TRAFFIC BY CHANNEL ════════════════════════════ -->
+<section>
+  <div class="slide-header">
+    <div class="slide-title">Traffic by Channel</div>
+    <div class="src-badge">
+      <img src="https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg" alt="GA4">
+      <span>Google Analytics 4</span>
+    </div>
   </div>
-  <h2>Traffic by Channel</h2>
   <table class="tbl">
     <thead>
       <tr>
@@ -364,12 +632,12 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td>Organic Search</td><td>1,320</td><td>2,514</td><td class="up-txt">+90%</td></tr>
-      <tr><td>Direct</td><td>1,550</td><td>1,949</td><td class="up-txt">+26%</td></tr>
-      <tr><td>Paid Search</td><td>1,126</td><td>1,524</td><td class="up-txt">+35%</td></tr>
-      <tr><td>Display</td><td>1</td><td>723</td><td class="up-txt">New channel activated</td></tr>
-      <tr><td>Referral</td><td>165</td><td>388</td><td class="up-txt">+135%</td></tr>
-      <tr><td>Organic Social</td><td>47</td><td>63</td><td class="up-txt">+34%</td></tr>
+      <tr><td>Organic Search</td><td>1,320</td><td>2,514</td><td class="up">+90%</td></tr>
+      <tr><td>Direct</td><td>1,550</td><td>1,949</td><td class="up">+26%</td></tr>
+      <tr><td>Paid Search</td><td>1,126</td><td>1,524</td><td class="up">+35%</td></tr>
+      <tr><td>Display</td><td>1</td><td>723</td><td class="up">New channel activated</td></tr>
+      <tr><td>Referral</td><td>165</td><td>388</td><td class="up">+135%</td></tr>
+      <tr><td>Organic Social</td><td>47</td><td>63</td><td class="up">+34%</td></tr>
     </tbody>
   </table>
   <div class="callout">
@@ -377,35 +645,37 @@
   </div>
 </section>
 
-<!-- 9. DIVIDER AI -->
-<section data-background-color="#3a7d44" class="cover-section">
-  <div style="padding:30px 44px; text-align:center;">
-    <div class="divider-inner">
-      <div style="width:32px;height:32px;background:rgba(255,255,255,0.18);border-radius:6px;display:flex;align-items:center;justify-content:center;">
-        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" style="width:18px;height:18px;"><circle cx="12" cy="12" r="3"/><path d="M6 12a6 6 0 1012 0 6 6 0 00-12 0M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+<!-- ══ 9. DIVIDER: AI ════════════════════════════════════ -->
+<section class="div-slide">
+  <div class="div-inner">
+    <div class="div-header">
+      <div class="div-icon">
+        <svg fill="none" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
       </div>
-      <h2 style="color:white; border-bottom:none !important; margin:0 !important; padding:0 !important; font-size:1.15em !important; display:inline;">AI and LLM Referral Traffic</h2>
+      <div class="div-title">AI and LLM Referral Traffic</div>
     </div>
-    <div style="width:80%; margin:0 auto; border-bottom:1.5px solid rgba(255,255,255,0.2); margin-bottom:10px;"></div>
-    <p style="color:rgba(255,255,255,0.75); font-size:0.68em;">EZE is appearing in AI-generated answers</p>
+    <hr class="div-rule">
+    <div class="div-sub">EZE is appearing in AI-generated answers</div>
   </div>
 </section>
 
-<!-- 10. AI TRAFFIC -->
-<section data-background-color="#ffffff">
-  <h2>Traffic from AI Tools</h2>
-  <div class="cards-2" style="max-width:560px; margin-bottom:10px;">
+<!-- ══ 10. AI TRAFFIC ════════════════════════════════════ -->
+<section>
+  <div class="slide-header">
+    <div class="slide-title">Traffic from AI Tools</div>
+  </div>
+  <div class="cards-2" style="max-width:560px;">
     <div class="card">
-      <div class="lbl">ChatGPT Sessions</div>
+      <div class="card-label">ChatGPT Sessions</div>
       <div class="row-old"><span class="row-period">Oct&ndash;Dec 2025</span><span class="row-val">43</span></div>
       <div class="row-new"><span class="row-period">Jan&ndash;Mar 2026</span><span class="row-val">83</span></div>
-      <span class="chg">+93%</span>
+      <span class="card-chg">+93%</span>
     </div>
     <div class="card">
-      <div class="lbl">Bing AI / Copilot Sessions</div>
+      <div class="card-label">Bing AI / Copilot Sessions</div>
       <div class="row-old"><span class="row-period">Oct&ndash;Dec 2025</span><span class="row-val">209</span></div>
       <div class="row-new"><span class="row-period">Jan&ndash;Mar 2026</span><span class="row-val">143</span></div>
-      <span class="chg neg">-32%, monitoring</span>
+      <span class="card-chg neg">-32%, monitoring</span>
     </div>
   </div>
   <div class="ai-items">
@@ -417,13 +687,15 @@
   </div>
 </section>
 
-<!-- 11. TOP LANDING PAGES -->
-<section data-background-color="#ffffff">
-  <div class="src-badge">
-    <img src="https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg" alt="GA4">
-    <span>Google Analytics 4</span>
+<!-- ══ 11. TOP LANDING PAGES ════════════════════════════ -->
+<section>
+  <div class="slide-header">
+    <div class="slide-title">Top Landing Pages</div>
+    <div class="src-badge">
+      <img src="https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg" alt="GA4">
+      <span>Google Analytics 4</span>
+    </div>
   </div>
-  <h2>Top Landing Pages</h2>
   <table class="tbl">
     <thead>
       <tr>
@@ -434,13 +706,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td>/buy-tradelines</td><td>1,389</td><td>3,874</td><td class="up-txt">+179%</td></tr>
-      <tr><td>/ (Homepage)</td><td>1,755</td><td>1,837</td><td class="up-txt">+5%</td></tr>
-      <tr><td>/about</td><td>16</td><td>299</td><td class="up-txt">+1,769%</td></tr>
-      <tr><td>/reseller-supplier-programs</td><td>17</td><td>50</td><td class="up-txt">+194%</td></tr>
-      <tr><td>/faqs</td><td>14</td><td>45</td><td class="up-txt">+221%</td></tr>
-      <tr><td>/the-8-best-tradeline-companies-in-2026</td><td>0</td><td>45</td><td class="up-txt"><span class="new-tag">New</span></td></tr>
-      <tr><td>/product/american-express-tradeline-20000</td><td>0</td><td>77</td><td class="up-txt"><span class="new-tag">New</span></td></tr>
+      <tr><td>/buy-tradelines</td><td>1,389</td><td>3,874</td><td class="up">+179%</td></tr>
+      <tr><td>/ (Homepage)</td><td>1,755</td><td>1,837</td><td class="up">+5%</td></tr>
+      <tr><td>/about</td><td>16</td><td>299</td><td class="up">+1,769%</td></tr>
+      <tr><td>/reseller-supplier-programs</td><td>17</td><td>50</td><td class="up">+194%</td></tr>
+      <tr><td>/faqs</td><td>14</td><td>45</td><td class="up">+221%</td></tr>
+      <tr><td>/the-8-best-tradeline-companies-in-2026</td><td>0</td><td>45</td><td class="up"><span class="new-tag">New</span></td></tr>
+      <tr><td>/product/american-express-tradeline-20000</td><td>0</td><td>77</td><td class="up"><span class="new-tag">New</span></td></tr>
     </tbody>
   </table>
   <div class="callout">
@@ -448,27 +720,29 @@
   </div>
 </section>
 
-<!-- 12. WHAT IS MOVING THE NEEDLE -->
-<section data-background-color="#ffffff">
-  <h2>What Is Moving the Needle</h2>
+<!-- ══ 12. WHAT IS MOVING THE NEEDLE ════════════════════ -->
+<section>
+  <div class="slide-header">
+    <div class="slide-title">What Is Moving the Needle</div>
+  </div>
   <div class="cards-3" style="margin-bottom:6px;">
     <div class="info-card">
-      <div class="ic-title">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      <div class="info-card-title">
+        <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
         New Content
       </div>
       <p>Fresh pages including "Best Tradeline Companies 2026," "Are Tradelines Legal," and the Amex product page entered Google's index and generated 6,932 impressions in their first period.</p>
     </div>
     <div class="info-card">
-      <div class="ic-title">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+      <div class="info-card-title">
+        <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
         Keyword Rankings
       </div>
       <p>"Primary tradelines for sale" jumped from position 21.8 to 11.4. "Buy tradelines" tripled in clicks. More commercial keywords pushing into page 1.</p>
     </div>
     <div class="info-card">
-      <div class="ic-title">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M6 12a6 6 0 1012 0 6 6 0 00-12 0"/></svg>
+      <div class="info-card-title">
+        <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M6.3 6.3a8 8 0 000 11.4M17.7 6.3a8 8 0 010 11.4M3.5 3.5a12 12 0 000 17M20.5 3.5a12 12 0 010 17"/></svg>
         AI Visibility
       </div>
       <p>ChatGPT referral sessions nearly doubled. EZE content is being referenced by AI tools, a compounding growth driver across all channels.</p>
@@ -476,22 +750,22 @@
   </div>
   <div class="cards-3">
     <div class="info-card">
-      <div class="ic-title">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+      <div class="info-card-title">
+        <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
         Referral Surge
       </div>
       <p>Referral traffic up +135%. New sources including urbansplatter.com and metapress.com are driving wider audience reach.</p>
     </div>
     <div class="info-card">
-      <div class="ic-title">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      <div class="info-card-title">
+        <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
         Display Channel
       </div>
       <p>Display advertising scaled in Jan&ndash;Mar 2026, generating 723 sessions from a channel that had essentially 1 session in the prior period.</p>
     </div>
     <div class="info-card">
-      <div class="ic-title">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+      <div class="info-card-title">
+        <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
         /buy-tradelines Up 179%
       </div>
       <p>The primary conversion page went from 1,389 to 3,874 sessions. The money page nearly tripled in traffic.</p>
@@ -499,9 +773,11 @@
   </div>
 </section>
 
-<!-- 13. RESULTS AT A GLANCE -->
-<section data-background-color="#ffffff">
-  <h2>Results at a Glance</h2>
+<!-- ══ 13. RESULTS AT A GLANCE ══════════════════════════ -->
+<section>
+  <div class="slide-header">
+    <div class="slide-title">Results at a Glance</div>
+  </div>
   <div class="res-grid">
     <div class="res-item"><span class="res-num">+74%</span><span class="res-text">Organic clicks from Google Search. 987 to 1,719 in the same 72-day window</span></div>
     <div class="res-item"><span class="res-num">+63%</span><span class="res-text">More impressions. Google is showing EZE to 26,688 more searchers per period</span></div>
@@ -514,8 +790,8 @@
   </div>
 </section>
 
-<!-- 14. CLOSING -->
-<section data-background="linear-gradient(150deg, #ffffff 30%, #d0e8d3 70%, #b8dbbf 100%)" class="cover-section">
+<!-- ══ 14. CLOSING ═══════════════════════════════════════ -->
+<section class="closing-slide">
   <div class="closing-inner">
     <img class="closing-logo" src="https://i0.wp.com/ezecreditservices.com/wp-content/uploads/2021/08/cropped-218973791_100895088956550_8922827240074766829_n.png?fit=192%2C192&ssl=1" alt="EZE">
     <div class="closing-headline">The momentum is compounding.</div>
@@ -544,10 +820,11 @@
     center: false,
     transition: 'fade',
     transitionSpeed: 'fast',
-    backgroundTransition: 'fade',
+    backgroundTransition: 'none',
     width: 1200,
     height: 680,
     margin: 0.03,
+    disableLayout: false,
   });
 </script>
 </body>
