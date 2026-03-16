@@ -12,7 +12,6 @@
 <style>
   :root {
     --g: #3a7d44;
-    --g2: #2e6636;
     --black: #1a1a1a;
     --mid: #555;
     --subtle: #888;
@@ -30,387 +29,206 @@
 
   .reveal .slides section {
     text-align: left;
-    padding: 0 44px;
+    padding: 0 40px;
     box-sizing: border-box;
   }
 
-  /* ── TYPOGRAPHY ── */
+  /* TYPOGRAPHY */
   .reveal h2 {
     font-family: 'Inter', sans-serif !important;
     color: var(--black) !important;
-    font-size: 1.15em !important;
+    font-size: 1.05em !important;
     font-weight: 600 !important;
     letter-spacing: -0.01em !important;
     border-bottom: 1.5px solid var(--border) !important;
-    padding-bottom: 8px !important;
-    margin-bottom: 14px !important;
+    padding-bottom: 7px !important;
+    margin-bottom: 12px !important;
     margin-top: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
   }
 
   .reveal p, .reveal li, .reveal td, .reveal th {
     font-family: 'Inter', sans-serif !important;
-    font-size: 0.72em !important;
-    line-height: 1.5 !important;
+    line-height: 1.45 !important;
     color: var(--black) !important;
   }
 
-  /* ── COVER ── */
-  .cover {
-    background: var(--white) !important;
-    text-align: center !important;
-  }
+  /* COVER */
+  .cover { background: var(--white) !important; text-align: center !important; }
   .cover-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding: 20px;
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: center; height: 100%; padding: 16px;
   }
-  .cover-logo {
-    width: 52px;
-    height: 52px;
-    border-radius: 10px;
-    margin-bottom: 18px;
-    object-fit: contain;
-  }
-  .cover-title {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.7em;
-    font-weight: 700;
-    color: var(--black);
-    letter-spacing: -0.02em;
-    margin: 0 0 6px;
-    line-height: 1.2;
-  }
-  .cover-sub {
-    font-size: 0.78em;
-    color: var(--subtle);
-    margin: 0 0 22px;
-    font-weight: 400;
-  }
-  .cover-periods {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    justify-content: center;
-    margin-bottom: 18px;
-  }
-  .period-pill {
-    font-size: 0.72em;
-    font-weight: 500;
-    padding: 5px 14px;
-    border-radius: 20px;
-    border: 1.5px solid var(--border);
-    color: var(--mid);
-    background: var(--bg);
-  }
-  .period-pill.active {
-    background: var(--g);
-    color: white;
-    border-color: var(--g);
-  }
-  .arrow-sep {
-    color: var(--subtle);
-    font-size: 1em;
-  }
-  .cover-date {
-    font-size: 0.65em;
-    color: var(--subtle);
-  }
+  .cover-logo { width: 48px; height: 48px; border-radius: 10px; margin-bottom: 14px; object-fit: contain; }
+  .cover-title { font-family: 'Inter', sans-serif; font-size: 1.6em; font-weight: 700; color: var(--black); letter-spacing: -0.02em; margin: 0 0 5px; line-height: 1.2; }
+  .cover-sub { font-size: 0.75em; color: var(--subtle); margin: 0 0 18px; font-weight: 400; }
+  .cover-periods { display: flex; align-items: center; gap: 10px; justify-content: center; margin-bottom: 14px; }
+  .period-pill { font-size: 0.68em; font-weight: 500; padding: 4px 12px; border-radius: 20px; border: 1.5px solid var(--border); color: var(--mid); background: var(--bg); }
+  .period-pill.active { background: var(--g); color: white; border-color: var(--g); }
+  .cover-date { font-size: 0.62em; color: var(--subtle); }
 
-  /* ── SECTION DIVIDER ── */
-  .divider {
-    background: var(--g) !important;
-    text-align: center !important;
-  }
-  .divider h2 {
-    color: white !important;
-    border-bottom: 1.5px solid rgba(255,255,255,0.25) !important;
-    font-size: 1.3em !important;
-    font-weight: 600 !important;
-    letter-spacing: -0.01em !important;
-  }
-  .divider p {
-    color: rgba(255,255,255,0.78) !important;
-    font-size: 0.76em !important;
-  }
+  /* DIVIDER */
+  .divider { text-align: center !important; }
+  .divider h2 { color: white !important; border-bottom: 1.5px solid rgba(255,255,255,0.25) !important; font-size: 1.25em !important; white-space: nowrap !important; text-align: center; }
+  .divider p { color: rgba(255,255,255,0.78) !important; font-size: 0.74em !important; }
 
-  /* ── METRIC CARDS ── */
-  .cards-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 10px; }
-  .cards-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; margin-bottom: 10px; }
-  .cards-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-bottom: 10px; }
+  /* METRIC CARDS - comparison layout */
+  .cards-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; margin-bottom: 8px; }
+  .cards-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 8px; margin-bottom: 8px; }
+  .cards-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin-bottom: 8px; }
 
   .card {
     background: var(--bg);
     border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 12px 12px 10px;
+    border-radius: 7px;
+    padding: 10px 11px;
     position: relative;
     overflow: hidden;
   }
-  .card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: var(--g);
-  }
-  .card .lbl {
-    font-size: 0.58em !important;
-    color: var(--subtle) !important;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    margin-bottom: 3px;
-    display: block;
-  }
-  .card .prev {
-    font-size: 0.65em !important;
-    color: #bbb !important;
-    text-decoration: line-through;
-    display: block;
-    line-height: 1.3;
-  }
-  .card .val {
-    font-size: 1.45em !important;
-    font-weight: 700 !important;
-    color: var(--black) !important;
-    line-height: 1.1;
-    display: block;
-  }
-  .card .chg {
-    font-size: 0.62em !important;
-    font-weight: 600 !important;
-    color: var(--up) !important;
-    margin-top: 2px;
-    display: block;
-  }
+  .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--g); }
+  .card .lbl { font-size: 0.56em !important; color: var(--subtle) !important; text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 6px; display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  /* comparison row inside card */
+  .card .cmp { display: flex; align-items: stretch; gap: 0; margin-top: 0; }
+  .card .cmp-col { flex: 1; padding: 6px 8px; border-radius: 5px; }
+  .card .cmp-col.old { background: #efefed; margin-right: 4px; }
+  .card .cmp-col.new { background: #e6f2e8; }
+  .card .cmp-col .period { font-size: 0.52em !important; color: var(--subtle) !important; display: block; margin-bottom: 2px; white-space: nowrap; }
+  .card .cmp-col.new .period { color: var(--g) !important; }
+  .card .cmp-col .num { font-size: 1.05em !important; font-weight: 700 !important; display: block; line-height: 1.1; }
+  .card .cmp-col.old .num { color: #888 !important; }
+  .card .cmp-col.new .num { color: var(--black) !important; }
+
+  .card .chg { font-size: 0.6em !important; font-weight: 600 !important; color: var(--up) !important; margin-top: 5px; display: block; }
   .card .chg.neg { color: #b71c1c !important; }
 
-  /* ── TABLE ── */
+  /* TABLE */
   .tbl { width: 100%; border-collapse: collapse; }
-  .tbl th {
-    background: var(--black);
-    color: white !important;
-    font-size: 0.62em !important;
-    font-weight: 500 !important;
-    padding: 6px 9px;
-    text-align: left;
-  }
+  .tbl th { background: var(--black); color: white !important; font-size: 0.58em !important; font-weight: 500 !important; padding: 5px 8px; text-align: left; white-space: nowrap; }
   .tbl th.gh { background: var(--g); }
-  .tbl td {
-    font-size: 0.67em !important;
-    padding: 5px 9px;
-    border-bottom: 1px solid var(--border);
-    vertical-align: middle;
-    color: var(--black) !important;
-  }
+  .tbl td { font-size: 0.62em !important; padding: 4px 8px; border-bottom: 1px solid var(--border); vertical-align: middle; color: var(--black) !important; }
   .tbl tr:nth-child(even) td { background: var(--bg); }
   .up-txt { color: var(--up) !important; font-weight: 600; }
-  .new-tag {
-    background: var(--g);
-    color: white;
-    font-size: 0.78em;
-    padding: 1px 7px;
-    border-radius: 10px;
-    font-weight: 500;
-  }
+  .new-tag { background: var(--g); color: white; font-size: 0.8em; padding: 1px 6px; border-radius: 8px; font-weight: 500; }
 
-  /* ── CALLOUT ── */
-  .callout {
-    background: #f0f7f0;
-    border-left: 3px solid var(--g);
-    border-radius: 0 6px 6px 0;
-    padding: 8px 12px;
-    margin-top: 10px;
-  }
-  .callout p {
-    margin: 0 !important;
-    font-size: 0.7em !important;
-    color: var(--mid) !important;
-    line-height: 1.5 !important;
-  }
+  /* CALLOUT */
+  .callout { background: #f0f7f0; border-left: 3px solid var(--g); border-radius: 0 5px 5px 0; padding: 7px 11px; margin-top: 8px; }
+  .callout p { margin: 0 !important; font-size: 0.66em !important; color: var(--mid) !important; line-height: 1.45 !important; }
   .callout p strong { color: var(--black) !important; }
 
-  /* ── INSIGHT LIST ── */
-  .ilist { list-style: none; padding: 0; margin: 8px 0 0; }
-  .ilist li {
-    font-size: 0.7em !important;
-    padding: 6px 10px 6px 24px;
-    position: relative;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    margin-bottom: 6px;
-    line-height: 1.45 !important;
-    color: var(--black) !important;
-  }
-  .ilist li::before {
-    content: '–';
-    position: absolute;
-    left: 9px;
-    color: var(--g);
-    font-weight: 700;
-  }
+  /* INSIGHT LIST */
+  .ilist { list-style: none; padding: 0; margin: 6px 0 0; }
+  .ilist li { font-size: 0.66em !important; padding: 5px 10px 5px 22px; position: relative; background: var(--bg); border: 1px solid var(--border); border-radius: 5px; margin-bottom: 5px; line-height: 1.4 !important; color: var(--black) !important; }
+  .ilist li::before { content: '-'; position: absolute; left: 8px; color: var(--g); font-weight: 700; }
 
-  /* ── INFO CARDS ── */
-  .info-card {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 12px;
-    border-top: 2px solid var(--g);
-  }
-  .info-card .ic-title {
-    font-size: 0.68em !important;
-    font-weight: 600 !important;
-    color: var(--black) !important;
-    margin-bottom: 4px;
-    display: block;
-  }
-  .info-card p {
-    font-size: 0.66em !important;
-    color: var(--mid) !important;
-    line-height: 1.45 !important;
-    margin: 0 !important;
-  }
+  /* INFO CARDS */
+  .info-card { background: var(--bg); border: 1px solid var(--border); border-radius: 7px; padding: 10px 11px; border-top: 2px solid var(--g); }
+  .info-card .ic-title { font-size: 0.65em !important; font-weight: 600 !important; color: var(--black) !important; margin-bottom: 3px; display: block; }
+  .info-card p { font-size: 0.61em !important; color: var(--mid) !important; line-height: 1.4 !important; margin: 0 !important; }
 
-  /* ── SUMMARY ── */
-  .sum-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 8px; margin-top: 6px; }
-  .sum-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 10px 12px;
-  }
-  .sum-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: var(--g);
-    flex-shrink: 0;
-    margin-top: 5px;
-  }
-  .sum-item p {
-    font-size: 0.68em !important;
-    color: var(--mid) !important;
-    line-height: 1.4 !important;
-    margin: 0 !important;
-  }
+  /* SUMMARY */
+  .sum-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 7px; margin-top: 6px; }
+  .sum-item { display: flex; align-items: flex-start; gap: 8px; background: var(--bg); border: 1px solid var(--border); border-radius: 7px; padding: 8px 11px; }
+  .sum-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--g); flex-shrink: 0; margin-top: 5px; }
+  .sum-item p { font-size: 0.65em !important; color: var(--mid) !important; line-height: 1.4 !important; margin: 0 !important; }
   .sum-item p strong { color: var(--black) !important; }
 
-  /* ── CLOSING ── */
-  .closing {
-    background: var(--white) !important;
-    text-align: center !important;
-  }
-  .closing-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding: 20px;
-  }
+  /* CLOSING */
+  .closing { background: var(--white) !important; text-align: center !important; }
+  .closing-inner { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 20px; }
 
-  /* ── PERIOD LABELS ── */
-  .pl-old { display: inline-block; background: #eee; color: var(--mid); padding: 2px 10px; border-radius: 10px; font-size: 0.65em; font-weight: 500; margin-right: 6px; }
-  .pl-new { display: inline-block; background: var(--g); color: white; padding: 2px 10px; border-radius: 10px; font-size: 0.65em; font-weight: 500; }
+  /* PERIOD LABELS */
+  .pl-old { display: inline-block; background: #eee; color: var(--mid); padding: 2px 9px; border-radius: 9px; font-size: 0.62em; font-weight: 500; margin-right: 5px; }
+  .pl-new { display: inline-block; background: var(--g); color: white; padding: 2px 9px; border-radius: 9px; font-size: 0.62em; font-weight: 500; }
 
-  /* reveal overrides */
+  /* REVEAL */
   .reveal .progress { color: var(--g) !important; height: 2px !important; }
   .reveal .controls button { color: var(--g) !important; }
   .reveal .slide-number { font-family: 'Inter', sans-serif !important; font-size: 11px !important; color: var(--subtle) !important; background: transparent !important; }
-  .reveal .slides { overflow: hidden; }
 </style>
 </head>
 <body>
 <div class="reveal">
 <div class="slides">
 
-<!-- ══════════════════════════════════
-     1. COVER
-══════════════════════════════════ -->
+<!-- 1. COVER -->
 <section class="cover" data-background-color="#ffffff">
   <div class="cover-inner">
     <img class="cover-logo" src="https://i0.wp.com/ezecreditservices.com/wp-content/uploads/2021/08/cropped-218973791_100895088956550_8922827240074766829_n.png?fit=192%2C192&ssl=1" alt="EZE Credit Services">
     <div class="cover-title">SEO Performance Report</div>
-    <div class="cover-sub">EZE Credit Services &nbsp;·&nbsp; ezecreditservices.com</div>
+    <div class="cover-sub">EZE Credit Services &nbsp;&middot;&nbsp; ezecreditservices.com</div>
     <div class="cover-periods">
-      <span class="period-pill">Oct–Dec 2025</span>
-      <span class="arrow-sep">→</span>
-      <span class="period-pill active">Jan–Mar 2026</span>
+      <span class="period-pill">Oct&ndash;Dec 2025</span>
+      <span style="color:var(--subtle); font-size:0.9em;">to</span>
+      <span class="period-pill active">Jan&ndash;Mar 2026</span>
     </div>
-    <div class="cover-date">Prepared March 16, 2026 &nbsp;·&nbsp; 72-day period comparison</div>
+    <div class="cover-date">Prepared March 16, 2026 &nbsp;&middot;&nbsp; 72-day period comparison</div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     2. DIVIDER — GSC
-══════════════════════════════════ -->
+<!-- 2. DIVIDER GSC -->
 <section class="divider" data-background-color="#3a7d44">
   <div style="padding:30px 44px; text-align:center;">
-    <h2 style="text-align:center;">Google Search Console</h2>
-    <p>Organic search visibility &amp; click performance</p>
+    <h2 style="text-align:center; color:white;">Google Search Console</h2>
+    <p>Organic search visibility and click performance</p>
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     3. GSC OVERVIEW
-══════════════════════════════════ -->
+<!-- 3. GSC OVERVIEW -->
 <section data-background-color="#ffffff">
   <h2>Organic Search Overview</h2>
-  <div style="margin-bottom:8px;">
-    <span class="pl-old">Oct–Dec 2025</span>
-    <span style="font-size:0.65em; color:#888;">compared to</span>
-    <span class="pl-new">Jan–Mar 2026</span>
-  </div>
   <div class="cards-4">
     <div class="card">
       <span class="lbl">Organic Clicks</span>
-      <span class="prev">987</span>
-      <span class="val">1,719</span>
+      <div class="cmp">
+        <div class="cmp-col old"><span class="period">Oct&ndash;Dec 2025</span><span class="num">987</span></div>
+        <div class="cmp-col new"><span class="period">Jan&ndash;Mar 2026</span><span class="num">1,719</span></div>
+      </div>
       <span class="chg">+74%</span>
     </div>
     <div class="card">
       <span class="lbl">Impressions</span>
-      <span class="prev">42,192</span>
-      <span class="val">68,880</span>
+      <div class="cmp">
+        <div class="cmp-col old"><span class="period">Oct&ndash;Dec 2025</span><span class="num">42,192</span></div>
+        <div class="cmp-col new"><span class="period">Jan&ndash;Mar 2026</span><span class="num">68,880</span></div>
+      </div>
       <span class="chg">+63%</span>
     </div>
     <div class="card">
       <span class="lbl">Click-Through Rate</span>
-      <span class="prev">2.34%</span>
-      <span class="val">2.50%</span>
+      <div class="cmp">
+        <div class="cmp-col old"><span class="period">Oct&ndash;Dec 2025</span><span class="num">2.34%</span></div>
+        <div class="cmp-col new"><span class="period">Jan&ndash;Mar 2026</span><span class="num">2.50%</span></div>
+      </div>
       <span class="chg">+0.16pp</span>
     </div>
     <div class="card">
       <span class="lbl">Avg. Position</span>
-      <span class="prev">13.9</span>
-      <span class="val">12.7</span>
+      <div class="cmp">
+        <div class="cmp-col old"><span class="period">Oct&ndash;Dec 2025</span><span class="num">13.9</span></div>
+        <div class="cmp-col new"><span class="period">Jan&ndash;Mar 2026</span><span class="num">12.7</span></div>
+      </div>
       <span class="chg">Improved</span>
     </div>
   </div>
   <div class="callout">
-    <p>Google is showing EZE to <strong>63% more searchers</strong> — and those searchers are clicking more often. Both visibility and relevance improved simultaneously over the same 72-day window.</p>
+    <p>Google is showing EZE to <strong>63% more searchers</strong> and those searchers are clicking more often. Both visibility and relevance improved simultaneously over the same 72-day window.</p>
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     4. TOP KEYWORDS
-══════════════════════════════════ -->
+<!-- 4. TOP KEYWORDS -->
 <section data-background-color="#ffffff">
   <h2>Keyword Performance</h2>
   <table class="tbl">
     <thead>
       <tr>
         <th>Keyword</th>
-        <th>Oct–Dec 2025 Clicks</th>
-        <th>Oct–Dec 2025 Pos.</th>
-        <th class="gh">Jan–Mar 2026 Clicks</th>
-        <th class="gh">Jan–Mar 2026 Pos.</th>
+        <th>Oct&ndash;Dec Clicks</th>
+        <th>Oct&ndash;Dec Pos.</th>
+        <th class="gh">Jan&ndash;Mar Clicks</th>
+        <th class="gh">Jan&ndash;Mar Pos.</th>
         <th class="gh">Change</th>
       </tr>
     </thead>
@@ -424,113 +242,116 @@
       <tr><td>million dollar tradelines for sale</td><td>4</td><td>7.7</td><td>13</td><td>6.0</td><td class="up-txt">+225%</td></tr>
     </tbody>
   </table>
-  <div class="callout" style="margin-top:8px;">
-    <p>"Primary tradelines for sale" jumped <strong>10 positions</strong> (21.8 → 11.4). "Buy tradelines" tripled in clicks. High-intent buyer keywords all trending in the right direction.</p>
+  <div class="callout">
+    <p>"Primary tradelines for sale" jumped <strong>10 positions</strong> (21.8 to 11.4). "Buy tradelines" tripled in clicks. High-intent buyer keywords all trending in the right direction.</p>
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     5. NEW PAGES
-══════════════════════════════════ -->
+<!-- 5. NEW PAGES -->
 <section data-background-color="#ffffff">
   <h2>New Pages That Entered Search Rankings</h2>
-  <p style="color:#888; font-size:0.65em !important; margin-bottom:8px; margin-top:-6px;">Pages with no GSC data in Oct–Dec 2025 that gained traction in Jan–Mar 2026</p>
   <table class="tbl">
     <thead>
       <tr>
         <th>Page</th>
-        <th>Oct–Dec 2025</th>
-        <th class="gh">Jan–Mar 2026 Clicks</th>
-        <th class="gh">Jan–Mar 2026 Impr.</th>
+        <th>Oct&ndash;Dec 2025</th>
+        <th class="gh">Clicks</th>
+        <th class="gh">Impressions</th>
         <th class="gh">Avg Pos.</th>
       </tr>
     </thead>
     <tbody>
       <tr><td>/product/american-express-tradeline-20000</td><td>No data</td><td>85</td><td>858</td><td>6.3</td></tr>
       <tr><td>/the-8-best-tradeline-companies-in-2026</td><td>No data</td><td>16</td><td>2,274</td><td>8.5</td></tr>
-      <tr><td>/authorized-user-tradelines-what-they-are…</td><td>No data</td><td>6</td><td>2,035</td><td>8.7</td></tr>
+      <tr><td>/authorized-user-tradelines-what-they-are-and-how-they-work</td><td>No data</td><td>6</td><td>2,035</td><td>8.7</td></tr>
       <tr><td>/are-tradelines-legal</td><td>0 clicks / 190 impr.</td><td>4</td><td>2,368</td><td>6.8</td></tr>
-      <tr><td>/the-8-best-alternatives-to-tradeline-supply…</td><td>No data</td><td>3</td><td>197</td><td>6.6</td></tr>
+      <tr><td>/the-8-best-alternatives-to-tradeline-supply-in-2026</td><td>No data</td><td>3</td><td>197</td><td>6.6</td></tr>
     </tbody>
   </table>
-  <div class="callout" style="margin-top:8px;">
-    <p><strong>6,932 combined impressions</strong> across these 5 pages. Google is indexing new content quickly — clicks grow as positions climb.</p>
+  <div class="callout">
+    <p>All figures are for Jan&ndash;Mar 2026. <strong>6,932 combined impressions</strong> across these 5 pages. Google is indexing new content quickly and clicks grow as positions improve.</p>
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     6. DIVIDER — GA4
-══════════════════════════════════ -->
+<!-- 6. DIVIDER GA4 -->
 <section class="divider" data-background-color="#3a7d44">
   <div style="padding:30px 44px; text-align:center;">
-    <h2 style="text-align:center;">Google Analytics 4</h2>
-    <p>Overall site traffic, users &amp; channel performance</p>
+    <h2 style="text-align:center; color:white;">Google Analytics 4</h2>
+    <p>Overall site traffic, users and channel performance</p>
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     7. GA4 OVERVIEW
-══════════════════════════════════ -->
+<!-- 7. GA4 OVERVIEW -->
 <section data-background-color="#ffffff">
   <h2>Site Traffic Overview</h2>
   <div class="cards-4">
     <div class="card">
       <span class="lbl">Sessions</span>
-      <span class="prev">4,462</span>
-      <span class="val">7,452</span>
+      <div class="cmp">
+        <div class="cmp-col old"><span class="period">Oct&ndash;Dec 2025</span><span class="num">4,462</span></div>
+        <div class="cmp-col new"><span class="period">Jan&ndash;Mar 2026</span><span class="num">7,452</span></div>
+      </div>
       <span class="chg">+67%</span>
     </div>
     <div class="card">
       <span class="lbl">Total Users</span>
-      <span class="prev">2,524</span>
-      <span class="val">5,150</span>
+      <div class="cmp">
+        <div class="cmp-col old"><span class="period">Oct&ndash;Dec 2025</span><span class="num">2,524</span></div>
+        <div class="cmp-col new"><span class="period">Jan&ndash;Mar 2026</span><span class="num">5,150</span></div>
+      </div>
       <span class="chg">+104%</span>
     </div>
     <div class="card">
       <span class="lbl">New Users</span>
-      <span class="prev">2,401</span>
-      <span class="val">5,014</span>
+      <div class="cmp">
+        <div class="cmp-col old"><span class="period">Oct&ndash;Dec 2025</span><span class="num">2,401</span></div>
+        <div class="cmp-col new"><span class="period">Jan&ndash;Mar 2026</span><span class="num">5,014</span></div>
+      </div>
       <span class="chg">+109%</span>
     </div>
     <div class="card">
       <span class="lbl">Page Views</span>
-      <span class="prev">18,776</span>
-      <span class="val">29,196</span>
+      <div class="cmp">
+        <div class="cmp-col old"><span class="period">Oct&ndash;Dec 2025</span><span class="num">18,776</span></div>
+        <div class="cmp-col new"><span class="period">Jan&ndash;Mar 2026</span><span class="num">29,196</span></div>
+      </div>
       <span class="chg">+55%</span>
     </div>
   </div>
   <div class="cards-2">
     <div class="card">
       <span class="lbl">Avg. Session Duration</span>
-      <span class="prev">322 sec</span>
-      <span class="val">266 sec</span>
-      <span class="chg neg">–56s (more volume, faster intent)</span>
+      <div class="cmp">
+        <div class="cmp-col old"><span class="period">Oct&ndash;Dec 2025</span><span class="num">322s</span></div>
+        <div class="cmp-col new"><span class="period">Jan&ndash;Mar 2026</span><span class="num">266s</span></div>
+      </div>
+      <span class="chg neg">-56s (more volume, faster intent)</span>
     </div>
     <div class="card">
       <span class="lbl">Bounce Rate</span>
-      <span class="prev">10.6%</span>
-      <span class="val">11.4%</span>
-      <span class="chg neg">+0.8pp — still very healthy</span>
+      <div class="cmp">
+        <div class="cmp-col old"><span class="period">Oct&ndash;Dec 2025</span><span class="num">10.6%</span></div>
+        <div class="cmp-col new"><span class="period">Jan&ndash;Mar 2026</span><span class="num">11.4%</span></div>
+      </div>
+      <span class="chg neg">+0.8pp, still very healthy</span>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     8. CHANNEL BREAKDOWN
-══════════════════════════════════ -->
+<!-- 8. CHANNEL BREAKDOWN -->
 <section data-background-color="#ffffff">
   <h2>Traffic by Channel</h2>
   <table class="tbl">
     <thead>
       <tr>
         <th>Channel</th>
-        <th>Oct–Dec 2025</th>
-        <th class="gh">Jan–Mar 2026</th>
+        <th>Oct&ndash;Dec 2025 Sessions</th>
+        <th class="gh">Jan&ndash;Mar 2026 Sessions</th>
         <th class="gh">Change</th>
       </tr>
     </thead>
     <tbody>
-      <tr><td>Organic Search</td><td>1,320 sessions</td><td>2,514 sessions</td><td class="up-txt">+90%</td></tr>
+      <tr><td>Organic Search</td><td>1,320</td><td>2,514</td><td class="up-txt">+90%</td></tr>
       <tr><td>Direct</td><td>1,550</td><td>1,949</td><td class="up-txt">+26%</td></tr>
       <tr><td>Paid Search</td><td>1,126</td><td>1,524</td><td class="up-txt">+35%</td></tr>
       <tr><td>Display</td><td>1</td><td>723</td><td class="up-txt">New channel activated</td></tr>
@@ -539,59 +360,57 @@
     </tbody>
   </table>
   <div class="callout">
-    <p>Organic Search nearly <strong>doubled (+90%)</strong>. Display went from 1 session to 723 — a new acquisition channel activated and scaled in Jan–Mar 2026.</p>
+    <p>Organic Search nearly <strong>doubled (+90%)</strong>. Display went from 1 session to 723, a new acquisition channel that was activated and scaled in Jan&ndash;Mar 2026.</p>
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     9. DIVIDER — AI TRAFFIC
-══════════════════════════════════ -->
+<!-- 9. DIVIDER AI -->
 <section class="divider" data-background-color="#3a7d44">
   <div style="padding:30px 44px; text-align:center;">
-    <h2 style="text-align:center;">AI &amp; LLM Referral Traffic</h2>
+    <h2 style="text-align:center; color:white;">AI and LLM Referral Traffic</h2>
     <p>EZE is appearing in AI-generated answers</p>
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     10. AI TRAFFIC
-══════════════════════════════════ -->
+<!-- 10. AI TRAFFIC -->
 <section data-background-color="#ffffff">
   <h2>Traffic from AI Tools</h2>
-  <div class="cards-2" style="max-width:560px;">
+  <div class="cards-2" style="max-width:580px; margin-bottom:10px;">
     <div class="card">
       <span class="lbl">ChatGPT Sessions</span>
-      <span class="prev">43 sessions</span>
-      <span class="val">83</span>
+      <div class="cmp">
+        <div class="cmp-col old"><span class="period">Oct&ndash;Dec 2025</span><span class="num">43</span></div>
+        <div class="cmp-col new"><span class="period">Jan&ndash;Mar 2026</span><span class="num">83</span></div>
+      </div>
       <span class="chg">+93%</span>
     </div>
     <div class="card">
-      <span class="lbl">Bing AI / Copilot</span>
-      <span class="prev">209 sessions</span>
-      <span class="val">143</span>
-      <span class="chg neg">–32% (monitoring)</span>
+      <span class="lbl">Bing AI / Copilot Sessions</span>
+      <div class="cmp">
+        <div class="cmp-col old"><span class="period">Oct&ndash;Dec 2025</span><span class="num">209</span></div>
+        <div class="cmp-col new"><span class="period">Jan&ndash;Mar 2026</span><span class="num">143</span></div>
+      </div>
+      <span class="chg neg">-32%, monitoring</span>
     </div>
   </div>
   <ul class="ilist">
-    <li>ChatGPT is now a measurable referral source — EZE is being cited in AI-generated credit answers</li>
+    <li>ChatGPT is now a measurable referral source. EZE is being cited in AI-generated credit answers</li>
     <li>ChatGPT sessions nearly doubled period over period (+93%)</li>
-    <li>Perplexity and Gemini referrals may appear as Direct/Unassigned in GA4 — actual AI influence is likely higher than shown</li>
-    <li>As AI search grows, EZE's content authority is already driving referrals from these platforms</li>
-    <li>Bing AI dip is being monitored — likely reflects Bing Copilot answer format changes, not a ranking drop</li>
+    <li>Perplexity and Gemini referrals may appear as Direct/Unassigned in GA4. Actual AI influence is likely higher than shown</li>
+    <li>As AI search grows, EZE content authority is already driving referrals from these platforms</li>
+    <li>Bing AI dip likely reflects Bing Copilot answer format changes, not a ranking drop</li>
   </ul>
 </section>
 
-<!-- ══════════════════════════════════
-     11. TOP LANDING PAGES
-══════════════════════════════════ -->
+<!-- 11. TOP LANDING PAGES -->
 <section data-background-color="#ffffff">
   <h2>Top Landing Pages</h2>
   <table class="tbl">
     <thead>
       <tr>
         <th>Page</th>
-        <th>Oct–Dec 2025</th>
-        <th class="gh">Jan–Mar 2026</th>
+        <th>Oct&ndash;Dec 2025</th>
+        <th class="gh">Jan&ndash;Mar 2026</th>
         <th class="gh">Change</th>
       </tr>
     </thead>
@@ -606,19 +425,17 @@
     </tbody>
   </table>
   <div class="callout">
-    <p>/buy-tradelines is the primary conversion page — <strong>+179% in sessions</strong> is the headline growth story of this period.</p>
+    <p>/buy-tradelines is the primary conversion page. <strong>+179% in sessions</strong> is the headline growth story of this period.</p>
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     12. WHAT'S MOVING THE NEEDLE
-══════════════════════════════════ -->
+<!-- 12. WHAT'S MOVING THE NEEDLE -->
 <section data-background-color="#ffffff">
-  <h2>What's Moving the Needle</h2>
-  <div class="cards-3">
+  <h2>What Is Moving the Needle</h2>
+  <div class="cards-3" style="margin-bottom:7px;">
     <div class="info-card">
       <span class="ic-title">New Content</span>
-      <p>Fresh pages — "Best Tradeline Companies 2026," "Are Tradelines Legal," and the Amex product page — entered Google's index and generated 6,932 impressions in their first period.</p>
+      <p>Fresh pages including "Best Tradeline Companies 2026," "Are Tradelines Legal," and the Amex product page entered Google's index and generated 6,932 impressions in their first period.</p>
     </div>
     <div class="info-card">
       <span class="ic-title">Keyword Rankings</span>
@@ -626,54 +443,52 @@
     </div>
     <div class="info-card">
       <span class="ic-title">AI Visibility</span>
-      <p>ChatGPT referral sessions nearly doubled. EZE's educational content is being referenced by AI tools — a compounding growth driver across all channels.</p>
+      <p>ChatGPT referral sessions nearly doubled. EZE content is being referenced by AI tools, a compounding growth driver across all channels.</p>
     </div>
   </div>
-  <div class="cards-3" style="margin-top:8px;">
+  <div class="cards-3">
     <div class="info-card">
       <span class="ic-title">Referral Surge</span>
-      <p>Referral traffic up +135%. New sources including urbansplatter.com and metapress.com. Wider content distribution is driving new audiences.</p>
+      <p>Referral traffic up +135%. New sources including urbansplatter.com and metapress.com are driving wider audience reach.</p>
     </div>
     <div class="info-card">
       <span class="ic-title">Display Channel</span>
-      <p>Display advertising scaled in Jan–Mar 2026: 723 sessions from a channel that had essentially 1 session in the prior period.</p>
+      <p>Display advertising scaled in Jan&ndash;Mar 2026, generating 723 sessions from a channel that had essentially 1 session in the prior period.</p>
     </div>
     <div class="info-card">
-      <span class="ic-title">/buy-tradelines +179%</span>
-      <p>The primary conversion page went from 1,389 to 3,874 sessions. This is the most important number — the money page nearly tripled.</p>
+      <span class="ic-title">/buy-tradelines Up 179%</span>
+      <p>The primary conversion page went from 1,389 to 3,874 sessions. The money page nearly tripled in traffic.</p>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     13. SUMMARY
-══════════════════════════════════ -->
+<!-- 13. SUMMARY -->
 <section data-background-color="#ffffff">
   <h2>Results at a Glance</h2>
   <div class="sum-grid">
     <div class="sum-item">
       <div class="sum-dot"></div>
-      <p><strong>+74% organic clicks</strong> from Google Search — 987 to 1,719 in the same 72-day window</p>
+      <p><strong>+74% organic clicks</strong> from Google Search. 987 to 1,719 in the same 72-day window</p>
     </div>
     <div class="sum-item">
       <div class="sum-dot"></div>
-      <p><strong>+63% more impressions</strong> — Google is showing EZE to 26,688 more searchers per period</p>
+      <p><strong>+63% more impressions.</strong> Google is showing EZE to 26,688 more searchers per period</p>
     </div>
     <div class="sum-item">
       <div class="sum-dot"></div>
-      <p><strong>+104% total users</strong> — site audience doubled. New users up +109%</p>
+      <p><strong>+104% total users.</strong> Site audience doubled. New users up +109%</p>
     </div>
     <div class="sum-item">
       <div class="sum-dot"></div>
-      <p><strong>Organic Search +90%</strong> in GA4 sessions — every traffic channel grew</p>
+      <p><strong>Organic Search +90%</strong> in GA4 sessions. Every traffic channel grew</p>
     </div>
     <div class="sum-item">
       <div class="sum-dot"></div>
-      <p><strong>ChatGPT referrals +93%</strong> — EZE appearing in AI-generated credit answers</p>
+      <p><strong>ChatGPT referrals +93%.</strong> EZE is appearing in AI-generated credit answers</p>
     </div>
     <div class="sum-item">
       <div class="sum-dot"></div>
-      <p><strong>/buy-tradelines +179%</strong> — primary conversion page nearly tripled in sessions</p>
+      <p><strong>/buy-tradelines +179%.</strong> Primary conversion page nearly tripled in sessions</p>
     </div>
     <div class="sum-item">
       <div class="sum-dot"></div>
@@ -681,21 +496,19 @@
     </div>
     <div class="sum-item">
       <div class="sum-dot"></div>
-      <p><strong>Display channel activated</strong> — 723 new sessions from a channel that barely existed before</p>
+      <p><strong>Display channel activated.</strong> 723 new sessions from a channel that barely existed before</p>
     </div>
   </div>
 </section>
 
-<!-- ══════════════════════════════════
-     14. CLOSING
-══════════════════════════════════ -->
+<!-- 14. CLOSING -->
 <section class="closing" data-background-color="#ffffff">
   <div class="closing-inner">
     <img class="cover-logo" src="https://i0.wp.com/ezecreditservices.com/wp-content/uploads/2021/08/cropped-218973791_100895088956550_8922827240074766829_n.png?fit=192%2C192&ssl=1" alt="EZE Credit Services">
     <div style="font-size:1.3em; font-weight:700; color:var(--black); letter-spacing:-0.02em; margin-bottom:6px;">The momentum is compounding.</div>
-    <div style="font-size:0.76em; color:var(--subtle); max-width:420px; line-height:1.6; margin-bottom:20px;">Content investment → rankings → clicks → conversions.<br>Every metric is trending in the right direction.</div>
-    <div style="font-size:0.7em; color:var(--g); font-weight:500;">ezecreditservices.com</div>
-    <div style="font-size:0.58em; color:#bbb; margin-top:12px;">Data: Google Search Console &amp; Google Analytics 4 &nbsp;·&nbsp; Jan 1–Mar 13, 2026 vs Oct 21–Dec 31, 2025</div>
+    <div style="font-size:0.74em; color:var(--subtle); max-width:400px; line-height:1.6; margin-bottom:18px;">Content investment, rankings, clicks, conversions. Every metric is trending in the right direction.</div>
+    <div style="font-size:0.68em; color:var(--g); font-weight:500;">ezecreditservices.com</div>
+    <div style="font-size:0.56em; color:#bbb; margin-top:10px;">Data: Google Search Console and Google Analytics 4 &nbsp;&middot;&nbsp; Jan 1&ndash;Mar 13, 2026 vs Oct 21&ndash;Dec 31, 2025</div>
   </div>
 </section>
 
