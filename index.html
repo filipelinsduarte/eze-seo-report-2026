@@ -12,12 +12,14 @@
 <style>
   :root {
     --g: #3a7d44;
+    --g2: #2e6636;
     --g-light: #eaf3eb;
+    --g-mid: #d0e8d3;
     --black: #1a1a1a;
-    --mid: #555;
-    --subtle: #888;
-    --border: #e5e5e5;
-    --bg: #f7f7f5;
+    --mid: #4a4a4a;
+    --subtle: #777;
+    --border: #e0e0e0;
+    --bg: #f5f5f3;
     --white: #ffffff;
     --up: #2e7d32;
   }
@@ -29,19 +31,19 @@
 
   .reveal .slides section {
     text-align: left;
-    padding: 0 36px;
+    padding: 0 34px;
     box-sizing: border-box;
   }
 
   .reveal h2 {
     font-family: 'Inter', sans-serif !important;
     color: var(--black) !important;
-    font-size: 0.95em !important;
+    font-size: 0.88em !important;
     font-weight: 600 !important;
     letter-spacing: -0.01em !important;
     border-bottom: 1.5px solid var(--border) !important;
-    padding-bottom: 6px !important;
-    margin-bottom: 10px !important;
+    padding-bottom: 5px !important;
+    margin-bottom: 9px !important;
     margin-top: 0 !important;
     white-space: nowrap !important;
     overflow: hidden !important;
@@ -55,184 +57,145 @@
   }
 
   /* ── COVER ── */
-  .cover { background: var(--white) !important; text-align: center !important; }
   .cover-inner {
     display: flex; flex-direction: column; align-items: center;
-    justify-content: center; height: 100%; gap: 0;
-    background: linear-gradient(160deg, #ffffff 55%, #eaf3eb 100%);
+    justify-content: center; height: 100%; padding: 20px;
   }
   .cover-logo {
-    width: 56px; height: 56px; border-radius: 12px;
-    margin-bottom: 16px; object-fit: contain;
-    box-shadow: 0 4px 16px rgba(58,125,68,0.18);
+    width: 54px; height: 54px; border-radius: 12px; margin-bottom: 14px;
+    object-fit: contain; box-shadow: 0 6px 20px rgba(58,125,68,0.25);
   }
   .cover-tag {
-    font-size: 0.6em; font-weight: 600; letter-spacing: 1.2px;
+    font-size: 0.58em; font-weight: 600; letter-spacing: 1.4px;
     text-transform: uppercase; color: var(--g);
-    background: var(--g-light); padding: 3px 12px;
-    border-radius: 20px; margin-bottom: 12px;
+    background: rgba(255,255,255,0.7); border: 1px solid var(--g-mid);
+    padding: 3px 12px; border-radius: 20px; margin-bottom: 11px;
   }
   .cover-title {
-    font-size: 1.85em; font-weight: 700; color: var(--black);
-    letter-spacing: -0.025em; margin: 0 0 6px; line-height: 1.15;
+    font-size: 1.8em; font-weight: 700; color: var(--black);
+    letter-spacing: -0.025em; margin: 0 0 5px; line-height: 1.15;
+    text-align: center;
   }
-  .cover-sub { font-size: 0.72em; color: var(--subtle); margin: 0 0 22px; }
-  .cover-divider {
-    width: 40px; height: 2px; background: var(--g);
-    border-radius: 2px; margin: 0 auto 18px;
-  }
-  .cover-periods {
-    display: flex; align-items: center; gap: 10px;
-    justify-content: center; margin-bottom: 16px;
-  }
-  .period-pill {
-    font-size: 0.66em; font-weight: 500; padding: 5px 14px;
-    border-radius: 20px; border: 1.5px solid var(--border);
-    color: var(--mid); background: white;
-  }
-  .period-pill.active {
-    background: var(--g); color: white; border-color: var(--g);
-  }
-  .cover-date { font-size: 0.6em; color: #bbb; }
+  .cover-sub { font-size: 0.7em; color: var(--subtle); margin: 0 0 18px; text-align: center; }
+  .cover-divider { width: 36px; height: 2px; background: var(--g); border-radius: 2px; margin: 0 auto 16px; }
+  .cover-periods { display: flex; align-items: center; gap: 10px; justify-content: center; margin-bottom: 14px; }
+  .period-pill { font-size: 0.64em; font-weight: 500; padding: 5px 14px; border-radius: 20px; border: 1.5px solid var(--border); color: var(--mid); background: rgba(255,255,255,0.8); }
+  .period-pill.active { background: var(--g); color: white; border-color: var(--g); }
+  .cover-date { font-size: 0.58em; color: var(--subtle); text-align: center; }
 
   /* ── DIVIDER SLIDES ── */
   .divider { text-align: center !important; }
-  .divider h2 {
-    color: white !important; border-bottom: 1.5px solid rgba(255,255,255,0.22) !important;
-    font-size: 1.2em !important; white-space: nowrap !important;
-  }
-  .divider p { color: rgba(255,255,255,0.75) !important; font-size: 0.7em !important; }
+  .divider h2 { color: white !important; border-bottom: 1.5px solid rgba(255,255,255,0.2) !important; font-size: 1.15em !important; white-space: nowrap !important; }
+  .divider p { color: rgba(255,255,255,0.75) !important; font-size: 0.68em !important; }
 
-  /* ── METRIC CARDS — vertical layout ── */
-  .cards-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 7px; margin-bottom: 8px; }
-  .cards-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 7px; margin-bottom: 8px; }
-  .cards-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 7px; margin-bottom: 8px; }
+  /* ── METRIC CARDS ── */
+  .cards-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 6px; margin-bottom: 7px; }
+  .cards-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: 6px; margin-bottom: 7px; }
+  .cards-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 6px; margin-bottom: 7px; }
 
   .card {
-    background: var(--bg); border: 1px solid var(--border);
-    border-radius: 7px; padding: 9px 10px 8px;
-    position: relative; overflow: hidden;
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: 7px; padding: 8px 10px 7px;
+    position: relative; overflow: hidden; box-sizing: border-box;
   }
-  .card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0;
-    height: 2px; background: var(--g);
-  }
+  .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--g); }
+
   .card .lbl {
-    font-size: 0.52em !important; color: var(--subtle) !important;
+    font-size: 0.49em !important; color: var(--subtle) !important;
     text-transform: uppercase; letter-spacing: 0.6px;
-    margin-bottom: 6px; display: block;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    margin-bottom: 5px; display: block;
   }
-  /* vertical row inside card */
-  .card .row-old {
-    display: flex; align-items: baseline; gap: 5px;
-    margin-bottom: 3px; padding-bottom: 4px;
-    border-bottom: 1px solid var(--border);
+
+  /* vertical row layout */
+  .row-old {
+    background: #f2f2f0; border-radius: 4px;
+    padding: 4px 7px; margin-bottom: 3px;
   }
-  .card .row-new {
-    display: flex; align-items: baseline; gap: 5px;
-    margin-bottom: 4px;
+  .row-new {
+    background: var(--g-light); border-radius: 4px;
+    padding: 4px 7px; margin-bottom: 4px;
   }
-  .card .row-period {
-    font-size: 0.5em !important; font-weight: 400 !important;
-    white-space: nowrap; flex-shrink: 0;
+  .row-period {
+    font-size: 0.47em !important; font-weight: 400 !important;
+    display: block; margin-bottom: 1px; white-space: nowrap;
   }
-  .card .row-old .row-period { color: #aaa !important; }
-  .card .row-new .row-period { color: var(--g) !important; }
-  .card .row-old .row-val {
-    font-size: 0.82em !important; font-weight: 600 !important;
-    color: #aaa !important;
+  .row-old .row-period { color: #999 !important; }
+  .row-new .row-period { color: var(--g) !important; font-weight: 500 !important; }
+  .row-val {
+    font-size: 0.95em !important; font-weight: 700 !important;
+    display: block; line-height: 1.1;
   }
-  .card .row-new .row-val {
-    font-size: 1.05em !important; font-weight: 700 !important;
-    color: var(--black) !important;
-  }
-  .card .chg {
-    font-size: 0.55em !important; font-weight: 600 !important;
-    color: var(--up) !important; display: block;
-  }
-  .card .chg.neg { color: #b71c1c !important; }
+  .row-old .row-val { color: #aaa !important; }
+  .row-new .row-val { color: var(--black) !important; }
+
+  .chg { font-size: 0.5em !important; font-weight: 600 !important; color: var(--up) !important; display: block; }
+  .chg.neg { color: #c62828 !important; }
 
   /* ── TABLE ── */
   .tbl { width: 100%; border-collapse: collapse; }
   .tbl th {
     background: var(--black); color: white !important;
-    font-size: 0.54em !important; font-weight: 500 !important;
+    font-size: 0.52em !important; font-weight: 500 !important;
     padding: 5px 7px; text-align: left; white-space: nowrap;
   }
   .tbl th.gh { background: var(--g); }
-  .tbl td {
-    font-size: 0.58em !important; padding: 4px 7px;
-    border-bottom: 1px solid var(--border);
-    color: var(--black) !important; vertical-align: middle;
-  }
+  .tbl td { font-size: 0.56em !important; padding: 4px 7px; border-bottom: 1px solid var(--border); color: var(--mid) !important; vertical-align: middle; }
   .tbl tr:nth-child(even) td { background: var(--bg); }
   .up-txt { color: var(--up) !important; font-weight: 600; }
-  .new-tag {
-    background: var(--g); color: white; font-size: 0.82em;
-    padding: 1px 6px; border-radius: 8px; font-weight: 500;
-  }
+  .new-tag { background: var(--g); color: white; font-size: 0.82em; padding: 1px 6px; border-radius: 8px; font-weight: 500; }
 
   /* ── CALLOUT ── */
-  .callout {
-    background: var(--g-light); border-left: 2.5px solid var(--g);
-    border-radius: 0 5px 5px 0; padding: 6px 10px; margin-top: 7px;
-  }
-  .callout p { margin: 0 !important; font-size: 0.6em !important; color: var(--mid) !important; line-height: 1.45 !important; }
+  .callout { background: rgba(255,255,255,0.65); border-left: 2.5px solid var(--g); border-radius: 0 5px 5px 0; padding: 6px 10px; margin-top: 6px; }
+  .callout p { margin: 0 !important; font-size: 0.58em !important; color: var(--mid) !important; line-height: 1.45 !important; }
   .callout p strong { color: var(--black) !important; }
 
-  /* ── INSIGHT LIST ── */
-  .ilist { list-style: none; padding: 0; margin: 6px 0 0; }
-  .ilist li {
-    font-size: 0.6em !important; padding: 5px 10px 5px 20px;
-    position: relative; background: var(--bg); border: 1px solid var(--border);
-    border-radius: 5px; margin-bottom: 5px; line-height: 1.4 !important;
-    color: var(--mid) !important;
+  /* ── AI INSIGHT ITEMS (no bullets) ── */
+  .ai-items { margin: 8px 0 0; display: flex; flex-direction: column; gap: 5px; }
+  .ai-item {
+    background: rgba(255,255,255,0.7); border: 1px solid var(--border);
+    border-left: 2.5px solid var(--g);
+    border-radius: 0 5px 5px 0; padding: 6px 10px;
   }
-  .ilist li::before { content: '-'; position: absolute; left: 7px; color: var(--g); font-weight: 700; }
+  .ai-item p { margin: 0 !important; font-size: 0.59em !important; color: var(--mid) !important; line-height: 1.4 !important; }
 
-  /* ── INFO CARDS ── */
+  /* ── INFO CARDS (needle + results) ── */
   .info-card {
-    background: var(--bg); border: 1px solid var(--border);
+    background: rgba(255,255,255,0.7); border: 1px solid var(--border);
     border-radius: 7px; padding: 9px 10px; border-top: 2px solid var(--g);
   }
-  .info-card .ic-title {
-    font-size: 0.6em !important; font-weight: 600 !important;
-    color: var(--black) !important; margin-bottom: 3px; display: block;
-  }
-  .info-card p { font-size: 0.57em !important; color: var(--mid) !important; line-height: 1.4 !important; margin: 0 !important; }
+  .info-card .ic-title { font-size: 0.58em !important; font-weight: 600 !important; color: var(--black) !important; margin-bottom: 3px; display: block; }
+  .info-card p { font-size: 0.55em !important; color: var(--mid) !important; line-height: 1.4 !important; margin: 0 !important; }
 
-  /* ── SUMMARY ── */
-  .sum-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 6px; margin-top: 6px; }
-  .sum-item {
-    display: flex; align-items: flex-start; gap: 8px;
-    background: var(--bg); border: 1px solid var(--border);
-    border-radius: 6px; padding: 7px 10px;
+  /* ── RESULT ITEMS ── */
+  .res-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 6px; margin-top: 6px; }
+  .res-item {
+    background: rgba(255,255,255,0.7); border: 1px solid var(--border);
+    border-radius: 7px; padding: 8px 12px;
+    display: flex; align-items: flex-start; gap: 10px;
   }
-  .sum-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--g); flex-shrink: 0; margin-top: 5px; }
-  .sum-item p { font-size: 0.61em !important; color: var(--mid) !important; line-height: 1.4 !important; margin: 0 !important; }
-  .sum-item p strong { color: var(--black) !important; }
+  .res-num {
+    font-size: 1.05em !important; font-weight: 700 !important;
+    color: var(--g) !important; flex-shrink: 0; line-height: 1.2;
+    min-width: 56px;
+  }
+  .res-text { font-size: 0.58em !important; color: var(--mid) !important; line-height: 1.4 !important; }
 
   /* ── CLOSING ── */
-  .closing { background: var(--white) !important; text-align: center !important; }
   .closing-inner {
     display: flex; flex-direction: column; align-items: center;
-    justify-content: center; height: 100%;
-    background: linear-gradient(160deg, #ffffff 55%, #eaf3eb 100%);
-    padding: 20px;
+    justify-content: center; height: 100%; padding: 20px;
   }
-  .closing-logo { width: 48px; height: 48px; border-radius: 10px; margin-bottom: 14px; object-fit: contain; box-shadow: 0 4px 16px rgba(58,125,68,0.18); }
-  .closing-headline { font-size: 1.5em; font-weight: 700; color: var(--black); letter-spacing: -0.02em; margin-bottom: 8px; }
-  .closing-stats {
-    display: flex; gap: 28px; justify-content: center;
-    margin: 16px 0 20px;
-  }
-  .closing-stat { text-align: center; }
-  .closing-stat .cs-num { font-size: 1.4em; font-weight: 700; color: var(--g); display: block; line-height: 1.1; }
-  .closing-stat .cs-lbl { font-size: 0.58em; color: var(--subtle); display: block; margin-top: 2px; }
-  .closing-divider { width: 36px; height: 2px; background: var(--g); border-radius: 2px; margin: 0 auto 14px; }
-  .closing-url { font-size: 0.68em; color: var(--g); font-weight: 500; margin-bottom: 8px; }
-  .closing-note { font-size: 0.54em; color: #bbb; }
+  .closing-logo { width: 52px; height: 52px; border-radius: 12px; margin-bottom: 14px; object-fit: contain; box-shadow: 0 6px 20px rgba(58,125,68,0.25); }
+  .closing-headline { font-size: 1.55em; font-weight: 700; color: var(--black); letter-spacing: -0.02em; margin-bottom: 6px; text-align: center; }
+  .closing-sub { font-size: 0.68em; color: var(--subtle); text-align: center; margin-bottom: 20px; line-height: 1.5; }
+  .closing-stats { display: flex; gap: 0; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: rgba(255,255,255,0.8); margin-bottom: 20px; }
+  .closing-stat { flex: 1; text-align: center; padding: 14px 10px; border-right: 1px solid var(--border); }
+  .closing-stat:last-child { border-right: none; }
+  .cs-num { font-size: 1.5em; font-weight: 700; color: var(--g); display: block; line-height: 1.1; }
+  .cs-lbl { font-size: 0.55em; color: var(--subtle); display: block; margin-top: 3px; }
+  .closing-divider { width: 36px; height: 2px; background: var(--g); border-radius: 2px; margin: 0 auto 12px; }
+  .closing-url { font-size: 0.66em; color: var(--g); font-weight: 500; margin-bottom: 6px; }
+  .closing-note { font-size: 0.52em; color: #bbb; text-align: center; }
 
   /* REVEAL */
   .reveal .progress { color: var(--g) !important; height: 2px !important; }
@@ -244,8 +207,8 @@
 <div class="reveal">
 <div class="slides">
 
-<!-- 1. COVER -->
-<section class="cover" data-background-color="#ffffff">
+<!-- 1. COVER — full green gradient background -->
+<section data-background="linear-gradient(150deg, #ffffff 30%, #d0e8d3 70%, #b8dbbf 100%)">
   <div class="cover-inner">
     <img class="cover-logo" src="https://i0.wp.com/ezecreditservices.com/wp-content/uploads/2021/08/cropped-218973791_100895088956550_8922827240074766829_n.png?fit=192%2C192&ssl=1" alt="EZE">
     <div class="cover-tag">SEO Performance Report</div>
@@ -254,7 +217,7 @@
     <div class="cover-divider"></div>
     <div class="cover-periods">
       <span class="period-pill">Oct&ndash;Dec 2025</span>
-      <span style="color:#ccc; font-size:0.85em;">vs</span>
+      <span style="color:#aaa; font-size:0.8em;">vs</span>
       <span class="period-pill active">Jan&ndash;Mar 2026</span>
     </div>
     <div class="cover-date">Prepared March 16, 2026 &nbsp;&middot;&nbsp; 72-day period comparison</div>
@@ -264,13 +227,13 @@
 <!-- 2. DIVIDER GSC -->
 <section class="divider" data-background-color="#3a7d44">
   <div style="padding:30px 44px; text-align:center;">
-    <h2 style="text-align:center; color:white; border-bottom-color:rgba(255,255,255,0.22);">Google Search Console</h2>
+    <h2 style="text-align:center; color:white; border-bottom-color:rgba(255,255,255,0.2);">Google Search Console</h2>
     <p>Organic search visibility and click performance</p>
   </div>
 </section>
 
-<!-- 3. GSC OVERVIEW -->
-<section data-background-color="#ffffff">
+<!-- 3. GSC OVERVIEW — green gradient bg -->
+<section data-background="linear-gradient(150deg, #f9fdf9 0%, #eaf3eb 100%)">
   <h2>Organic Search Overview</h2>
   <div class="cards-4">
     <div class="card">
@@ -304,7 +267,7 @@
 </section>
 
 <!-- 4. KEYWORD PERFORMANCE -->
-<section data-background-color="#ffffff">
+<section data-background="linear-gradient(150deg, #f9fdf9 0%, #eaf3eb 100%)">
   <h2>Keyword Performance</h2>
   <table class="tbl">
     <thead>
@@ -333,7 +296,7 @@
 </section>
 
 <!-- 5. NEW PAGES -->
-<section data-background-color="#ffffff">
+<section data-background="linear-gradient(150deg, #f9fdf9 0%, #eaf3eb 100%)">
   <h2>New Pages That Entered Search Rankings</h2>
   <table class="tbl">
     <thead>
@@ -354,20 +317,20 @@
     </tbody>
   </table>
   <div class="callout">
-    <p>Clicks and impressions figures are for Jan&ndash;Mar 2026. <strong>6,932 combined impressions</strong> across these 5 pages. Google is indexing new content quickly and clicks grow as positions improve.</p>
+    <p>Clicks and impressions are for Jan&ndash;Mar 2026. <strong>6,932 combined impressions</strong> across these 5 pages. Google is indexing new content quickly and clicks grow as positions improve.</p>
   </div>
 </section>
 
 <!-- 6. DIVIDER GA4 -->
 <section class="divider" data-background-color="#3a7d44">
   <div style="padding:30px 44px; text-align:center;">
-    <h2 style="text-align:center; color:white; border-bottom-color:rgba(255,255,255,0.22);">Google Analytics 4</h2>
+    <h2 style="text-align:center; color:white; border-bottom-color:rgba(255,255,255,0.2);">Google Analytics 4</h2>
     <p>Overall site traffic, users and channel performance</p>
   </div>
 </section>
 
 <!-- 7. GA4 OVERVIEW -->
-<section data-background-color="#ffffff">
+<section data-background="linear-gradient(150deg, #f9fdf9 0%, #eaf3eb 100%)">
   <h2>Site Traffic Overview</h2>
   <div class="cards-4">
     <div class="card">
@@ -412,7 +375,7 @@
 </section>
 
 <!-- 8. CHANNEL BREAKDOWN -->
-<section data-background-color="#ffffff">
+<section data-background="linear-gradient(150deg, #f9fdf9 0%, #eaf3eb 100%)">
   <h2>Traffic by Channel</h2>
   <table class="tbl">
     <thead>
@@ -433,20 +396,20 @@
     </tbody>
   </table>
   <div class="callout">
-    <p>Organic Search nearly <strong>doubled (+90%)</strong>. Display went from 1 session to 723, a new acquisition channel that was activated and scaled in Jan&ndash;Mar 2026.</p>
+    <p>Organic Search nearly <strong>doubled (+90%)</strong>. Display went from 1 session to 723, a new acquisition channel activated and scaled in Jan&ndash;Mar 2026.</p>
   </div>
 </section>
 
 <!-- 9. DIVIDER AI -->
 <section class="divider" data-background-color="#3a7d44">
   <div style="padding:30px 44px; text-align:center;">
-    <h2 style="text-align:center; color:white; border-bottom-color:rgba(255,255,255,0.22);">AI and LLM Referral Traffic</h2>
+    <h2 style="text-align:center; color:white; border-bottom-color:rgba(255,255,255,0.2);">AI and LLM Referral Traffic</h2>
     <p>EZE is appearing in AI-generated answers</p>
   </div>
 </section>
 
 <!-- 10. AI TRAFFIC -->
-<section data-background-color="#ffffff">
+<section data-background="linear-gradient(150deg, #f9fdf9 0%, #eaf3eb 100%)">
   <h2>Traffic from AI Tools</h2>
   <div class="cards-2" style="max-width:560px; margin-bottom:10px;">
     <div class="card">
@@ -462,17 +425,17 @@
       <span class="chg neg">-32%, monitoring</span>
     </div>
   </div>
-  <ul class="ilist">
-    <li>ChatGPT is now a measurable referral source. EZE is being cited in AI-generated credit answers</li>
-    <li>ChatGPT sessions nearly doubled period over period (+93%)</li>
-    <li>Perplexity and Gemini may appear as Direct/Unassigned in GA4. Actual AI influence is likely higher than shown</li>
-    <li>As AI search grows, EZE content authority is already driving referrals from these platforms</li>
-    <li>Bing AI dip likely reflects Bing Copilot answer format changes, not a ranking drop</li>
-  </ul>
+  <div class="ai-items">
+    <div class="ai-item"><p>ChatGPT is now a measurable referral source. EZE is being cited in AI-generated credit answers</p></div>
+    <div class="ai-item"><p>ChatGPT sessions nearly doubled period over period (+93%)</p></div>
+    <div class="ai-item"><p>Perplexity and Gemini may appear as Direct/Unassigned in GA4. Actual AI influence is likely higher than shown</p></div>
+    <div class="ai-item"><p>As AI search grows, EZE content authority is already driving referrals from these platforms</p></div>
+    <div class="ai-item"><p>Bing AI dip likely reflects Bing Copilot answer format changes, not a ranking drop</p></div>
+  </div>
 </section>
 
 <!-- 11. TOP LANDING PAGES -->
-<section data-background-color="#ffffff">
+<section data-background="linear-gradient(150deg, #f9fdf9 0%, #eaf3eb 100%)">
   <h2>Top Landing Pages</h2>
   <table class="tbl">
     <thead>
@@ -499,7 +462,7 @@
 </section>
 
 <!-- 12. WHAT IS MOVING THE NEEDLE -->
-<section data-background-color="#ffffff">
+<section data-background="linear-gradient(150deg, #f9fdf9 0%, #eaf3eb 100%)">
   <h2>What Is Moving the Needle</h2>
   <div class="cards-3" style="margin-bottom:6px;">
     <div class="info-card">
@@ -508,7 +471,7 @@
     </div>
     <div class="info-card">
       <span class="ic-title">Keyword Rankings</span>
-      <p>"Primary tradelines for sale" jumped from position 21.8 to 11.4. "Buy tradelines" tripled in clicks. More commercial keywords are pushing into page 1.</p>
+      <p>"Primary tradelines for sale" jumped from position 21.8 to 11.4. "Buy tradelines" tripled in clicks. More commercial keywords pushing into page 1.</p>
     </div>
     <div class="info-card">
       <span class="ic-title">AI Visibility</span>
@@ -532,42 +495,31 @@
 </section>
 
 <!-- 13. RESULTS AT A GLANCE -->
-<section data-background-color="#ffffff">
+<section data-background="linear-gradient(150deg, #f9fdf9 0%, #eaf3eb 100%)">
   <h2>Results at a Glance</h2>
-  <div class="sum-grid">
-    <div class="sum-item"><div class="sum-dot"></div><p><strong>+74% organic clicks</strong> from Google Search. 987 to 1,719 in the same 72-day window</p></div>
-    <div class="sum-item"><div class="sum-dot"></div><p><strong>+63% more impressions.</strong> Google is showing EZE to 26,688 more searchers per period</p></div>
-    <div class="sum-item"><div class="sum-dot"></div><p><strong>+104% total users.</strong> Site audience doubled. New users up +109%</p></div>
-    <div class="sum-item"><div class="sum-dot"></div><p><strong>Organic Search +90%</strong> in GA4 sessions. Every traffic channel grew</p></div>
-    <div class="sum-item"><div class="sum-dot"></div><p><strong>ChatGPT referrals +93%.</strong> EZE is appearing in AI-generated credit answers</p></div>
-    <div class="sum-item"><div class="sum-dot"></div><p><strong>/buy-tradelines +179%.</strong> Primary conversion page nearly tripled in sessions</p></div>
-    <div class="sum-item"><div class="sum-dot"></div><p><strong>5 new pages</strong> entered search rankings with 6,932 combined impressions</p></div>
-    <div class="sum-item"><div class="sum-dot"></div><p><strong>Display channel activated.</strong> 723 new sessions from a channel that barely existed before</p></div>
+  <div class="res-grid">
+    <div class="res-item"><span class="res-num">+74%</span><span class="res-text">Organic clicks from Google Search. 987 to 1,719 in the same 72-day window</span></div>
+    <div class="res-item"><span class="res-num">+63%</span><span class="res-text">More impressions. Google is showing EZE to 26,688 more searchers per period</span></div>
+    <div class="res-item"><span class="res-num">+104%</span><span class="res-text">Total users. Site audience doubled. New users up +109%</span></div>
+    <div class="res-item"><span class="res-num">+90%</span><span class="res-text">Organic Search sessions in GA4. Every traffic channel grew</span></div>
+    <div class="res-item"><span class="res-num">+93%</span><span class="res-text">ChatGPT referral sessions. EZE is appearing in AI-generated credit answers</span></div>
+    <div class="res-item"><span class="res-num">+179%</span><span class="res-text">/buy-tradelines sessions. Primary conversion page nearly tripled in traffic</span></div>
+    <div class="res-item"><span class="res-num">5</span><span class="res-text">New pages entered search rankings with 6,932 combined impressions</span></div>
+    <div class="res-item"><span class="res-num">723</span><span class="res-text">New sessions from Display, a channel that barely existed in the prior period</span></div>
   </div>
 </section>
 
-<!-- 14. CLOSING -->
-<section class="closing" data-background-color="#ffffff">
+<!-- 14. CLOSING — full green gradient -->
+<section data-background="linear-gradient(150deg, #ffffff 30%, #d0e8d3 70%, #b8dbbf 100%)">
   <div class="closing-inner">
     <img class="closing-logo" src="https://i0.wp.com/ezecreditservices.com/wp-content/uploads/2021/08/cropped-218973791_100895088956550_8922827240074766829_n.png?fit=192%2C192&ssl=1" alt="EZE">
     <div class="closing-headline">The momentum is compounding.</div>
+    <div class="closing-sub">Content investment, rankings, clicks, conversions.<br>Every metric is trending in the right direction.</div>
     <div class="closing-stats">
-      <div class="closing-stat">
-        <span class="cs-num">+74%</span>
-        <span class="cs-lbl">Organic Clicks</span>
-      </div>
-      <div class="closing-stat">
-        <span class="cs-num">+104%</span>
-        <span class="cs-lbl">Total Users</span>
-      </div>
-      <div class="closing-stat">
-        <span class="cs-num">+179%</span>
-        <span class="cs-lbl">/buy-tradelines</span>
-      </div>
-      <div class="closing-stat">
-        <span class="cs-num">+93%</span>
-        <span class="cs-lbl">ChatGPT Referrals</span>
-      </div>
+      <div class="closing-stat"><span class="cs-num">+74%</span><span class="cs-lbl">Organic Clicks</span></div>
+      <div class="closing-stat"><span class="cs-num">+104%</span><span class="cs-lbl">Total Users</span></div>
+      <div class="closing-stat"><span class="cs-num">+179%</span><span class="cs-lbl">/buy-tradelines</span></div>
+      <div class="closing-stat"><span class="cs-num">+93%</span><span class="cs-lbl">ChatGPT Referrals</span></div>
     </div>
     <div class="closing-divider"></div>
     <div class="closing-url">ezecreditservices.com</div>
@@ -587,7 +539,7 @@
     center: true,
     transition: 'fade',
     transitionSpeed: 'fast',
-    backgroundTransition: 'none',
+    backgroundTransition: 'fade',
     width: 1200,
     height: 680,
     margin: 0.03,
